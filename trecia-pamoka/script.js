@@ -59,7 +59,7 @@
 
 // Atsakymas:
 // let drauguSkaicius = 10;
-// drauguSkaicius += 5;
+// let drauguSkaicius += 5;
 // console.log(`draugų skaičius: ${drauguSkaicius}`);
 
 // 8. Uždavinys: Kavos užsakymas
