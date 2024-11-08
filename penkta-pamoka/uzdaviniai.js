@@ -119,7 +119,7 @@ let trecias = -16;
 // 13. Susikurkite skaiciaus kintamaji. Atlikite siuos veiksmus:
 // 1) jei skaicius dalinasi is 5, tuomet isveskite sio skaiciaus daugybos lentele nuo 1 iki 5.
 
-a = 10;
+let a = 4;
 
 // if (a % 5 === 0) {
 //   console.log(
@@ -148,4 +148,110 @@ a = 10;
 //   );
 // } else {
 //   console.log('Skaičius dalijasi iš 7.');
+// }
+// -----------------------------------
+// 14. Susikurkite kintamaji egzamino pazymiui saugoti [0 - 10]. Naudojant ekse if patikrinkite šias sąlygas:
+// 1) Jei pažymys lygu 10 išvesti "puikiu".
+
+// if (a === 10) {
+//   console.log('Puiku');
+// } else {
+//   console.log(' ');
+// }
+
+// 2) Jei pažymys yra lygus arba didesnis nei 9 isvesti "labai gerai":
+
+// if (a >= 9) {
+//   console.log('labai gerai');
+// } else {
+//   console.log(' ');
+// }
+
+// 3) Jei pažymys yra lygus arba didesnis nei 7 isvesti "gerai":
+
+// if (a >= 7) {
+//   console.log('gerai');
+// } else {
+//   console.log(' ');
+// }
+
+// 4) Jei pažymys yra lygus arba didesnis nei 5 isvesti "patenkinamai":
+
+// if (a >= 5) {
+//   console.log('patenkinamai');
+// } else {
+//   console.log(' ');
+// }
+
+// 5) Jei pažymys yra mazesnis nei 5 isvesti "egaminas neislaikytas":
+
+// if (a < 5) {
+//   console.log('egzaminas neislaikytas');
+// } else {
+//   console.log(' ');
+// }
+
+// 15. Susikurkite tris skaiciu kintamuosius. Patikrinkite sias salygas (naudojant else if dalis)
+// 1) ar pirmas skaicius didesnis uz antra:
+
+// if (pirmas > antras) {
+//   console.log('pimras didesnis uz antra');
+// } else {
+//   console.log('pimras nedidesnis uz antra');
+// }
+
+// 2) ar antras didesnis uz trecia:
+
+// if (antras > trecias) {
+//   console.log('antras didesnis uz trecia');
+// } else {
+//   console.log('antras nedidesnis uz trecia');
+// }
+
+// 3) ar trecias didesnis uz pirma:
+
+// if (trecias > pirmas) {
+//   console.log('trecias didesnis uz pirma');
+// } else {
+//   console.log('trecias nedidesnis uz pirma');
+// }
+
+// 4) ar pirmi du skaiciai yra lygus:
+
+// if (pirmas === antras) {
+//   console.log('pirmi du skaiciai lygus');
+// } else {
+//   console.log('pirmi du skaiciai nelygus');
+// }
+
+// 5) ar paskutiniai du skaiciai yra lygus:
+
+// if (antras === trecias) {
+//   console.log('paskutiniai du skaiciai yra lygus');
+// } else {
+//   console.log('paskutiniai du skaiciai yra nelygus');
+// }
+
+// 6. ar pirmas skaicius yra lygus 0:
+
+// if (pirmas === 0) {
+//   console.log('pirmas skaicius yra lygus 0');
+// } else {
+//   console.log('pirmas skaicius yra nelygus 0');
+// }
+
+// 7. ar antras skaicius neigiamas:
+
+// if (antras < 0) {
+//   console.log('antras skaicius neigiamas');
+// } else {
+//   console.log('antras skaicius teigiamas');
+// }
+
+// 8. ar trecias skaicius teigiamas:
+
+// if (trecias > 0) {
+//   console.log('trecias skaicius teigiamas');
+// } else {
+//   console.log('trecias skaicius neigiamas');
 // }
