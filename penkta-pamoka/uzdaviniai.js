@@ -255,3 +255,4 @@ let a = 4;
 // } else {
 //   console.log('trecias skaicius neigiamas');
 // }
+// ----------------------------------------------------
