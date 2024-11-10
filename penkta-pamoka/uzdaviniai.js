@@ -30,7 +30,7 @@ let trecias = -16;
 
 // 4. Ar antras yra didesnis už dvigubą trečiojo skaičiaus reikšmę (trečias skaičius padaugintas iš 2)?
 
-// if (antras > trecias ** 2 * 2) {
+// if (antras > trecias ** 2) {
 //   console.log('antras yra didesnis už trečiojo skaičiaus kvadratą');
 // } else {
 //   console.log('antras nėra didesnis už trečiojo skaičiaus kvadratą');
@@ -256,3 +256,35 @@ let a = 4;
 //   console.log('trecias skaicius neigiamas');
 // }
 // ----------------------------------------------------
+
+// 17. Susikurkite skaičiui saugoti kintamajį. Tikrinkite (naudojant visas if sąlygos dalis)
+// jeigu nieko nepavyko išveskite klaidos pranešimą:
+// 1. ar skaičius yra lyginis? 2. ar dalinasi iš 5? 3. ar skaičius lygus 3?
+
+// if (a % 2 === 0) {
+//   console.log('skaicius yra lyginis');
+// } else if (a % 5 === 0) {
+//   console.log('skaicius dalinasi is 5');
+// } else if (a === 3) {
+//   console.log('skaicius yra lygus 3');
+// } else {
+//   console.log('Klaida: skaičius neatitinka nė vienos sąlygos.');
+// }
+
+// 18. Susikurkite tris skaicčius. Tikrinkite (naudojant visas if sąlygos dalis):
+// 1. ar pirmri du skaičiai lygūs? 2. ar pirmas ir trečias skaičiai lygūs? 3. ar trečias skaičius didesnis už pirmą?
+// 4. ar antras skaičius lygus dvigubai trečio skaičiaus reikšmei? 4. ar pirmas skaičius dalinasi iš 3?
+
+// if (pirmas === antras) {
+//   console.log('pirmas ir antras skaičiai lygūs');
+// } else if (pirmas === trecias) {
+//   console.log('pirmas ir trečias skaičiai lygūs');
+// } else if (trecias > pirmas) {
+//   console.log('trečias skaičius didesnis uz pirmą');
+// } else if (antras === trecias ** 2) {
+//   console.log('antras skaičius lygus dvigubai trečio skaičiaus reikšmei');
+// } else if (pirmas % 3 === 0) {
+//   console.log('pirmas skaičius dalinasi iš 3');
+// } else {
+//   console.log('Klaida: skaičius neatitinka nė vienos sąlygos.');
+// }
