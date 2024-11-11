@@ -106,11 +106,16 @@ let trecias = -16;
 
 // 12. Susikurkite kelis kintamuosius saugoti pazymiams. Raskite siu pazymiu vidurkį. Patikrinkite ar vidurkis teigiamas (daugiau arba lygu5), jei taip - isveskite "vidurkis teigiamas".
 
+// const teigiamasVidurkis = 5;
 // let pazymys1 = 8;
 // let pazymys2 = 7;
 // let pazymys3 = 5;
 
-// if ((pazymys1 + pazymys2 + pazymys3) / 3 >= 5) {
+// let vidurkis = (pazymys1 + pazymys2 + pazymys3) / 3;
+
+// console.log(vidurkis.toFixed(0));
+
+// if (vidurkis >= teigiamasVidurkis) {
 //   console.log('vidurkis teigiamas');
 // } else {
 //   console.log('vidurkis neigiamas');
