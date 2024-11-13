@@ -103,15 +103,15 @@
 
 // 12. Susikurkite tris skaicius. Suraskite kuris is siu skaiciu yra didziausias.
 
-let skaicius1 = 5;
-let skaicius2 = 7;
-let skaicius3 = 10;
+// let skaicius1 = 5;
+// let skaicius2 = 70;
+// let skaicius3 = 10;
 // let didziausias;
-let maziausias;
+// // let maziausias;
 
-// if (skaicius1 >= skaicius2 && skaicius1 >= skaicius3) {
+// if (skaicius1 > skaicius2 && skaicius1 > skaicius3) {
 //   didziausias = skaicius1;
-// } else if (skaicius2 >= skaicius1 && skaicius2 >= skaicius3) {
+// } else if (skaicius2 > skaicius1 && skaicius2 > skaicius3) {
 //   didziausias = skaicius2;
 // } else {
 //   didziausias = skaicius3;
@@ -121,9 +121,9 @@ let maziausias;
 
 // 13. Susikurkite tris skaicius. Suraskite kuris is siu skaiciu yra maziausias.
 
-// if (skaicius1 <= skaicius2 && skaicius1 <= skaicius3) {
+// if (skaicius1 < skaicius2 && skaicius1 < skaicius3) {
 //   maziausias = skaicius1;
-// } else if (skaicius2 <= skaicius1 && skaicius2 <= skaicius3) {
+// } else if (skaicius2 < skaicius1 && skaicius2 < skaicius3) {
 //   maziausias = skaicius2;
 // } else {
 //   maziausias = skaicius3;
@@ -139,13 +139,15 @@ let maziausias;
 // let egzaminas3 = 6;
 
 // let vidurkis = (egzaminas1 + egzaminas2 + egzaminas3) / 3;
+// let suapvalintasVidurkis = vidurkis.toFixed(1);
+// console.log('Vidurkis:', suapvalintasVidurkis);
 
-// if (vidurkis >= 8 && vidurkis <= 10) {
-//   console.log('Vidurkis yra [8-10] ribose:', vidurkis.toFixed(2));
-// } else if (vidurkis >= 5 && vidurkis < 8) {
-//   console.log('Vidurkis yra [5-8] ribose:', vidurkis.toFixed(2));
-// } else if (vidurkis < 5) {
-//   console.log('Vidurkis yra mažiau nei 5:', vidurkis.toFixed(2));
+// if (suapvalintasVidurkis >= 8 && suapvalintasVidurkis <= 10) {
+//   console.log('Vidurkis yra [8-10] ribose');
+// } else if (suapvalintasVidurkis >= 5 && suapvalintasVidurkis < 8) {
+//   console.log('Vidurkis yra [5-8] ribose');
+// } else if (suapvalintasVidurkis < 5) {
+//   console.log('Vidurkis yra mažiau už 5', suapvalintasVidurkis);
 // }
 
 // 15. Susikurkite du skaicius. Patikrinkite (naudojant 4 atskirus if'us):
@@ -153,3 +155,22 @@ let maziausias;
 // 2. ar antras skaicius yra didesnis uz pirmaji arba yra lygus 5;
 // 3. ar pirmas skaicius yra didesnis uz antraji ir yra lygus 20;
 // 4. ar antras skaicius yra didesnis uz pirmaji ir yra mazesnis uz 100;
+
+// let a = 5;
+// let b = 10;
+
+// if (a > b || a === 0) {
+//   console.log('Pirmas skaicius yra didesnis uz antraji arba yra lygus 0');
+// }
+
+// if (b > a || b === 5) {
+//   console.log('Antras skaicius yra didesnis uz pirmaji arba yra lygus 5');
+// }
+
+// if (a > b && a === 20) {
+//   console.log('Pirmas skaicius yra didesnis uz antraji ir yra lygus 20');
+// }
+
+// if (b > a && b < 100) {
+//   console.log('Antras skaicius yra didesnis uz pirmaji ir yra mazesnis uz 100');
+// }
