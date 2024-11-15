@@ -4,7 +4,7 @@
 // const vienoKepaloKaina = 3.0;
 // const dienosUzsakytasKiekis = 20;
 
-// // 1. Suskaiciuoti kiek kepykla per viena darbo diena spes iskepti duonos kepalu.
+// // // 1. Suskaiciuoti kiek kepykla per viena darbo diena spes iskepti duonos kepalu.
 
 // const dienosDarboLaikas = darboValandos * 60;
 // const darboDienosKepaluSkaicius = dienosDarboLaikas / kepaloKepimoLaikas;
@@ -12,21 +12,18 @@
 //   `Per darbo dieną bus iškepta kepalų: ${darboDienosKepaluSkaicius} vnt.`
 // );
 
-// // 2. Apskaiciuoti visu kepalu savikaina, gautas pajamas pardavus ir is to gauto pelno dali.
+// // // 2. Apskaiciuoti visu kepalu savikaina, gautas pajamas pardavus ir is to gauto pelno dali.
 
-// // Visu kepalu savikaina
 // const savikaina = darboDienosKepaluSkaicius * vienoKepaloSavikaina;
 // console.log(`Visų kepalų savikaina: ${savikaina.toFixed(2)} EUR`);
 
-// // Pajamos pardavus visus kepalus
 // const pajamos = darboDienosKepaluSkaicius * vienoKepaloKaina;
 // console.log(`Pajamos pardavus visus kepalus: ${pajamos.toFixed(2)} EUR`);
 
-// // Pelnas
 // const pelnas = pajamos - savikaina;
 // console.log(`Pelno suma: ${pelnas.toFixed(2)} EUR`);
 
-// // 3. Patikrinti ar kepykla spes iskepti visa tos dienos uzsakyma. Jei ne, suiskaiciuoti kiek kepalu nespes iskepti.
+// // // 3. Patikrinti ar kepykla spes iskepti visa tos dienos uzsakyma. Jei ne, suiskaiciuoti kiek kepalu nespes iskepti.
 
 // if (darboDienosKepaluSkaicius >= dienosUzsakytasKiekis) {
 //   console.log('Užsakymas bus įvykdytas');
@@ -37,7 +34,7 @@
 //   );
 // }
 
-// // 4. (Papildomai) Ivertinkite tai, kad pajamas ir pelna galite gauti pilnai ivykdius uzsakyma.
+// // // 4. (Papildomai) Ivertinkite tai, kad pajamas ir pelna galite gauti pilnai ivykdius uzsakyma.
 // let pajamosNepilnai = 0;
 // let pelnasNepilnai = 0;
 
