@@ -18,7 +18,7 @@
 // const savikaina = darboDienosKepaluSkaicius * vienoKepaloSavikaina;
 // console.log(`Visų kepalų savikaina: ${savikaina.toFixed(2)} EUR`);
 
-// // Pajamas pardavus visus kepalus
+// // Pajamos pardavus visus kepalus
 // const pajamos = darboDienosKepaluSkaicius * vienoKepaloKaina;
 // console.log(`Pajamos pardavus visus kepalus: ${pajamos.toFixed(2)} EUR`);
 
