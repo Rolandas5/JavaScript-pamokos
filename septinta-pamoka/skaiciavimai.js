@@ -14,19 +14,19 @@
 
 // // 2. Apskaiciuoti visu kepalu savikaina, gautas pajamas pardavus ir is to gauto pelno dali.
 
-// Visu kepalu savikaina
+// // Visu kepalu savikaina
 // const savikaina = darboDienosKepaluSkaicius * vienoKepaloSavikaina;
-// console.log('Visų kepalų savikaina:', savikaina.toFixed(2), 'EUR');
+// console.log(`Visų kepalų savikaina: ${savikaina.toFixed(2)} EUR`);
 
 // // Pajamas pardavus visus kepalus
 // const pajamos = darboDienosKepaluSkaicius * vienoKepaloKaina;
-// console.log('Pajamos pardavus visus kepalus:', pajamos.toFixed(2), 'EUR');
+// console.log(`Pajamos pardavus visus kepalus: ${pajamos.toFixed(2)} EUR`);
 
-// Pelnas
+// // Pelnas
 // const pelnas = pajamos - savikaina;
-// console.log('Pelno suma:', pelnas.toFixed(2), 'EUR');
+// console.log(`Pelno suma: ${pelnas.toFixed(2)} EUR`);
 
-// 3. Patikrinti ar kepykla spes iskepti visa tos dienos uzsakyma. Jei ne, suiskaiciuoti kiek kepalu nespes iskepti.
+// // 3. Patikrinti ar kepykla spes iskepti visa tos dienos uzsakyma. Jei ne, suiskaiciuoti kiek kepalu nespes iskepti.
 
 // if (darboDienosKepaluSkaicius >= dienosUzsakytasKiekis) {
 //   console.log('Užsakymas bus įvykdytas');
@@ -37,7 +37,7 @@
 //   );
 // }
 
-// 4. (Papildomai) Ivertinkite tai, kad pajamas ir pelna galite gauti pilnai ivykdius uzsakyma.
+// // 4. (Papildomai) Ivertinkite tai, kad pajamas ir pelna galite gauti pilnai ivykdius uzsakyma.
 // let pajamosNepilnai = 0;
 // let pelnasNepilnai = 0;
 
@@ -58,10 +58,10 @@
 // }
 // --------------------------- 10 UZDAVINIU -----------------------------
 
-// 1.) Užduotis: Kurjerio pristatymo patikrinimas
+// // 1.) Užduotis: Kurjerio pristatymo patikrinimas
 
-// Įsivaizduokite, kad kuriame kurjerio pristatymo sistemą, kuri patikrina, ar užsakymas bus pristatytas tą pačią dieną.
-// Pristatymas tą pačią dieną galimas tik tuo atveju, jei užsakymas buvo pateiktas iki tam tikros valandos (pvz., iki 15h) ir jei prekė yra sandėlyje.
+// // Įsivaizduokite, kad kuriame kurjerio pristatymo sistemą, kuri patikrina, ar užsakymas bus pristatytas tą pačią dieną.
+// // Pristatymas tą pačią dieną galimas tik tuo atveju, jei užsakymas buvo pateiktas iki tam tikros valandos (pvz., iki 15h) ir jei prekė yra sandėlyje.
 
 // const pateikimoLaikas = '14:30';
 // const sandelioStatusas = true;
@@ -75,15 +75,15 @@
 //   console.log('Prekės nėra sandėlyje, užsakymas nebus pristatytas.');
 // }
 
-// 2️.) Užduotis: Amžiaus kategorijos nustatymas
+// // 2️.) Užduotis: Amžiaus kategorijos nustatymas
 
-// Parašykime programą, kuri pagal žmogaus amžių nustato jo amžiaus kategoriją: vaikas, paauglys, suaugęs ar senjoras.
-// Taisyklės:
+// // Parašykime programą, kuri pagal žmogaus amžių nustato jo amžiaus kategoriją: vaikas, paauglys, suaugęs ar senjoras.
+// // Taisyklės:
 
-// Jei amžius mažesnis nei 13, žmogus yra vaikas.
-// Jei amžius tarp 13 ir 17 (imtinai), žmogus yra paauglys.
-// Jei amžius tarp 18 ir 64 (imtinai), žmogus yra suaugęs.
-// Jei amžius 65 ar daugiau, žmogus yra senjoras.
+// // Jei amžius mažesnis nei 13, žmogus yra vaikas.
+// // Jei amžius tarp 13 ir 17 (imtinai), žmogus yra paauglys.
+// // Jei amžius tarp 18 ir 64 (imtinai), žmogus yra suaugęs.
+// // Jei amžius 65 ar daugiau, žmogus yra senjoras.
 
 // const amzius = 67;
 
@@ -97,91 +97,200 @@
 //   console.log('Amžius 65 ir daugiau, žmogus yra senjoras');
 // }
 
-// 3.) Užduotis: Kavinės nuolaidų sistema
+// // 3.) Užduotis: Kavinės nuolaidų sistema
 
-// Įsivaizduokite, kad kuriame nuolaidų sistemą kavinei. Priklausomai nuo kliento statuso (pvz., ar jis yra lojalumo programos narys) ir pirkinio sumos, gali būti pritaikoma skirtinga nuolaida.
+// // Įsivaizduokite, kad kuriame nuolaidų sistemą kavinei. Priklausomai nuo kliento statuso (pvz., ar jis yra lojalumo programos narys) ir pirkinio sumos, gali būti pritaikoma skirtinga nuolaida.
 
-// Taisyklės:
-// Jei klientas yra lojalumo narys ir pirkinio suma yra daugiau nei 20 eurų, jis gauna 20% nuolaidą.
-// Jei klientas nėra lojalumo narys, bet pirkinio suma viršija 50 eurų, jis gauna 10% nuolaidą.
-// Jei nei viena iš sąlygų netenkinama, nuolaida nepritaikoma.
+// // Taisyklės:
+// // Jei klientas yra lojalumo narys ir pirkinio suma yra daugiau nei 20 eurų, jis gauna 20% nuolaidą.
+// // Jei klientas nėra lojalumo narys, bet pirkinio suma viršija 50 eurų, jis gauna 10% nuolaidą.
+// // Jei nei viena iš sąlygų netenkinama, nuolaida nepritaikoma.
 
 // const yraLojalumoNarys = false;
 // const pirkimoSuma = 30;
 // let nuolaida = 0;
 
 // if (yraLojalumoNarys && pirkimoSuma > 20) {
-//   nuolaida = 0.2;
-//   console.log(`Nuolaida pagal lojalumo narystę: ${nuolaida * 100}%`);
+//   nuolaida = 20;
+//   console.log(`Nuolaida pagal lojalumo narystę: ${nuolaida}%`);
 // } else if (!yraLojalumoNarys && pirkimoSuma > 50) {
-//   nuolaida = 0.1;
-//   console.log(`Nuolaida pagal pirkimo sumą (be lojalumo): ${nuolaida * 100}%`);
+//   nuolaida = 15;
+//   console.log(`Nuolaida pagal pirkimo sumą (be lojalumo): ${nuolaida}%`);
 // } else {
 //   nuolaida = 0;
 //   console.log('Nuolaida netaikoma');
 // }
 
-// const sumaSuNuolaida = pirkimoSuma - pirkimoSuma * nuolaida;
+// const sumaSuNuolaida = pirkimoSuma - (pirkimoSuma * nuolaida) / 100;
 // console.log(`Galutinė suma su nuolaida: ${sumaSuNuolaida.toFixed(2)} EUR`);
 
-// 4️⃣ Užduotis: Sporto klubo abonemento kaina
+// // 4.) Užduotis: Sporto klubo abonemento kaina
 
-// Sporto klubas siūlo nuolaidas abonementams, priklausomai nuo lankytojo amžiaus ir ar jis studentas.
-// Taisyklės:
+// // Sporto klubas siūlo nuolaidas abonementams, priklausomai nuo lankytojo amžiaus ir ar jis studentas.
+// // Taisyklės:
 
-// Jei lankytojas yra jaunesnis nei 18 metų arba studentas, jis gauna 15% nuolaidą.
-// Jei lankytojas vyresnis nei 60 metų, jam taip pat taikoma 15% nuolaida.
-// Kitais atvejais nuolaida netaikoma.
+// // Jei lankytojas yra jaunesnis nei 18 metų arba studentas, jis gauna 15% nuolaidą.
+// // Jei lankytojas vyresnis nei 60 metų, jam taip pat taikoma 15% nuolaida.
+// // Kitais atvejais nuolaida netaikoma.
 
-// 5️⃣ Užduotis: Egzamino įvertinimas pagal balą
+// let amzius = 20;
+// let arStudentas = true;
+// let nuolaida = 0;
 
-// Parašykime programą, kuri pagal surinktą balą nustato, kokį įvertinimą gauna mokinys. Ši užduotis padės mokiniams suprasti, kaip veikia sąlygos ir diapazonai.
-// Taisyklės:
+// if (amzius < 18 || arStudentas) {
+//   nuolaida = 15;
+// } else if (amzius > 60) {
+//   nuolaida = 15;
+// } else {
+//   nuolaida = 0;
+// }
 
-// Jei balas yra nuo 90 iki 100, mokinys gauna įvertinimą „Puikiai“.
-// Jei balas yra nuo 75 iki 89, įvertinimas yra „Gerai“.
-// Jei balas yra nuo 50 iki 74, įvertinimas yra „Patenkinamai“.
-// Jei balas yra mažesnis nei 50, įvertinimas yra „Nepatenkinamai“.
+// console.log(`Nuolaida yra: ${nuolaida}%`);
 
-// 6️⃣ Užduotis: Kino bilietų kainos nustatymas
+// // 5️.) Užduotis: Egzamino įvertinimas pagal balą
 
-// Parašykite programą, kuri apskaičiuoja kino bilieto kainą, atsižvelgiant į lankytojo amžių ir seanso laiką.
+// // Parašykime programą, kuri pagal surinktą balą nustato, kokį įvertinimą gauna mokinys. Ši užduotis padės mokiniams suprasti, kaip veikia sąlygos ir diapazonai.
+// // Taisyklės:
 
-// Jei lankytojas yra vaikas (mažiau nei 12 metų), bilieto kaina yra 5 eurai.
-// Jei lankytojas yra suaugęs ir eina į dienos seansą (iki 17 val.), bilieto kaina yra 7 eurai.
-// Jei lankytojas yra suaugęs ir eina į vakarinį seansą (nuo 17 val.), bilieto kaina yra 10 eurų.
-// Jei lankytojas yra senjoras (daugiau nei 65 metų), bilieto kaina yra 6 eurai.
+// // Jei balas yra nuo 90 iki 100, mokinys gauna įvertinimą „Puikiai“.
+// // Jei balas yra nuo 75 iki 89, įvertinimas yra „Gerai“.
+// // Jei balas yra nuo 50 iki 74, įvertinimas yra „Patenkinamai“.
+// // Jei balas yra mažesnis nei 50, įvertinimas yra „Nepatenkinamai“.
 
-// 7️⃣ Užduotis: Atsiskaitymo su nuolaida sistema
+// const balas = 85;
 
-// Sukurkite programą, kuri apskaičiuoja galutinę pirkimo sumą, pritaikant nuolaidas pagal savaitės dieną ir pirkinio sumą.
+// if (balas >= 90 && balas <= 100) {
+//   console.log('Balas yra nuo 90 iki 100, įvertinimas: Puikiai');
+// } else if (balas >= 75 && balas < 90) {
+//   console.log('Balas yra nuo 75 iki 89, įvertinimas: Gerai');
+// } else if (balas >= 50 && balas < 75) {
+//   console.log('Balas yra nuo 50 iki 74, įvertinimas: Patenkinamai');
+// } else {
+//   console.log('Balas yra mažesnis nei 50, įvertinimas: Nepatenkinamai');
+// }
 
-// Jei pirkimo suma viršija 100 eurų ir šiandien yra trečiadienis, taikoma 15% nuolaida.
-// Jei pirkimo suma viršija 50 eurų ir šiandien yra penktadienis, taikoma 10% nuolaida.
-// Kitais atvejais nuolaida netaikoma.
+// // 6️.) Užduotis: Kino bilietų kainos nustatymas
 
-// 8️⃣ Užduotis: Laikmatis darbo laiko patikrinimui
+// // Parašykite programą, kuri apskaičiuoja kino bilieto kainą, atsižvelgiant į lankytojo amžių ir seanso laiką.
 
-// Parašykite programą, kuri patikrina, ar įvestas laikas yra darbo laikas.
+// // Jei lankytojas yra vaikas (mažiau nei 12 metų), bilieto kaina yra 5 eurai.
+// // Jei lankytojas yra suaugęs ir eina į dienos seansą (iki 17 val.), bilieto kaina yra 7 eurai.
+// // Jei lankytojas yra suaugęs ir eina į vakarinį seansą (nuo 17 val.), bilieto kaina yra 10 eurų.
+// // Jei lankytojas yra senjoras (daugiau nei 65 metų), bilieto kaina yra 6 eurai.
 
-// Darbo laikas: nuo 9:00 iki 17:00.
-// Jei laikas patenka į darbo laiką, programa turi grąžinti pranešimą „Dabar darbo laikas“.
-// Jei laikas nepatenka į darbo laiką, programa turi grąžinti pranešimą „Dabar ne darbo laikas“.
+// const amzius = 30;
+// const seansoLaikas = 18;
+// let bilietoKaina = 0;
 
-// 9️⃣ Užduotis: Mokesčių apskaičiavimas pagal pajamas
+// if (amzius < 12) {
+//   bilietoKaina = 5;
+//   console.log(`Lankytojas yra vaikas, bilieto kaina: ${bilietoKaina} EUR`);
+// } else if (amzius > 65) {
+//   bilietoKaina = 6;
+//   console.log(`Lankytojas yra senjoras, bilieto kaina: ${bilietoKaina} EUR`);
+// } else if (seansoLaikas < 17) {
+//   bilietoKaina = 7;
+//   console.log(
+//     `Lankytojas suaugęs, dienos seansas, bilieto kaina: ${bilietoKaina} EUR`
+//   );
+// } else {
+//   bilietoKaina = 10;
+//   console.log(
+//     `Lankytojas suaugęs, vakarinis seansas, bilieto kaina: ${bilietoKaina} EUR`
+//   );
+// }
 
-// Sukurkite programą, kuri apskaičiuoja mokesčius pagal gyventojo pajamas.
+// // 7.) Užduotis: Atsiskaitymo su nuolaida sistema
 
-// Jei pajamos yra mažesnės nei 10,000 eurų per metus, mokestis yra 5%.
-// Jei pajamos yra tarp 10,000 ir 30,000 eurų, mokestis yra 10%.
-// Jei pajamos yra tarp 30,000 ir 60,000 eurų, mokestis yra 15%.
-// Jei pajamos yra daugiau nei 60,000 eurų, mokestis yra 20%.
+// // Sukurkite programą, kuri apskaičiuoja galutinę pirkimo sumą, pritaikant nuolaidas pagal savaitės dieną ir pirkinio sumą.
 
-// 🔟 Užduotis: Bibliotekos knygų skolinimo trukmės patikrinimas
+// // Jei pirkimo suma viršija 100 eurų ir šiandien yra trečiadienis, taikoma 15% nuolaida.
+// // Jei pirkimo suma viršija 50 eurų ir šiandien yra penktadienis, taikoma 10% nuolaida.
+// // Kitais atvejais nuolaida netaikoma.
 
-// Parašykite programą, kuri nustato, ar knygos skolinimosi trukmė yra leistina, priklausomai nuo skaitytojo statuso.
+// const pirkimoSuma = 120;
+// const diena = 'trečiadienis';
+// let nuolaida = 0;
 
-// Jei skaitytojas yra studentas, jis gali skolintis knygą 30 dienų.
-// Jei skaitytojas yra mokytojas, jis gali skolintis knygą 60 dienų.
-// Jei skaitytojas yra bibliotekos narys, bet nei studentas, nei mokytojas, jis gali skolintis knygą 14 dienų.
-// Jei skaitytojas nėra bibliotekos narys, jis negali skolintis knygos.
+// if (pirkimoSuma > 100 && diena === 'trečiadienis') {
+//   nuolaida = 15;
+//   console.log('Trečiadienis! Taikoma 15% nuolaida.');
+// } else if (pirkimoSuma > 50 && diena === 'penktadienis') {
+//   nuolaida = 10;
+//   console.log('Penktadienis! Taikoma 10% nuolaida.');
+// } else {
+//   nuolaida = 0;
+//   console.log('Nuolaida netaikoma.');
+// }
+
+// const sumaSuNuolaida = pirkimoSuma - (pirkimoSuma * nuolaida) / 100;
+// console.log(`Galutinė suma su nuolaida: ${sumaSuNuolaida} EUR`);
+
+// // 8️.) Užduotis: Laikmatis darbo laiko patikrinimui
+
+// // Parašykite programą, kuri patikrina, ar įvestas laikas yra darbo laikas.
+
+// // Darbo laikas: nuo 9:00 iki 17:00.
+// // Jei laikas patenka į darbo laiką, programa turi grąžinti pranešimą „Dabar darbo laikas“.
+// // Jei laikas nepatenka į darbo laiką, programa turi grąžinti pranešimą „Dabar ne darbo laikas“.
+
+// const laikas = 10;
+
+// if (laikas >= 9 && laikas < 17) {
+//   console.log('Dabar darbo laikas');
+// } else {
+//   console.log('Dabar ne darbo laikas');
+// }
+
+// // 9.) Užduotis: Mokesčių apskaičiavimas pagal pajamas
+
+// // Sukurkite programą, kuri apskaičiuoja mokesčius pagal gyventojo pajamas.
+
+// // Jei pajamos yra mažesnės nei 10,000 eurų per metus, mokestis yra 5%.
+// // Jei pajamos yra tarp 10,000 ir 30,000 eurų, mokestis yra 10%.
+// // Jei pajamos yra tarp 30,000 ir 60,000 eurų, mokestis yra 15%.
+// // Jei pajamos yra daugiau nei 60,000 eurų, mokestis yra 20%.
+
+// const pajamos = 65000;
+// let mokestis = 0;
+
+// if (pajamos < 10000) {
+//   mokestis = (pajamos * 5) / 100;
+//   console.log(`Mokestis yra 5%: ${mokestis} EUR`);
+// } else if (pajamos >= 10000 && pajamos <= 30000) {
+//   mokestis = (pajamos * 10) / 100;
+//   console.log(`Mokestis yra 10%: ${mokestis} EUR`);
+// } else if (pajamos > 30000 && pajamos <= 60000) {
+//   mokestis = (pajamos * 15) / 100;
+//   console.log(`Mokestis yra 15%: ${mokestis} EUR`);
+// } else {
+//   mokestis = (pajamos * 20) / 100;
+//   console.log(`Mokestis yra 20%: ${mokestis} EUR`);
+// }
+
+// // 10.) Užduotis: Bibliotekos knygų skolinimo trukmės patikrinimas
+
+// // Parašykite programą, kuri nustato, ar knygos skolinimosi trukmė yra leistina, priklausomai nuo skaitytojo statuso.
+
+// // Jei skaitytojas yra studentas, jis gali skolintis knygą 30 dienų.
+// // Jei skaitytojas yra mokytojas, jis gali skolintis knygą 60 dienų.
+// // Jei skaitytojas yra bibliotekos narys, bet nei studentas, nei mokytojas, jis gali skolintis knygą 14 dienų.
+// // Jei skaitytojas nėra bibliotekos narys, jis negali skolintis knygos.
+
+// const statusas = 'mokytojas';
+// let skolinimosiTrukme = 0;
+
+// if (statusas === 'studentas') {
+//   skolinimosiTrukme = 30;
+//   console.log(`Studentas gali skolintis knygą ${skolinimosiTrukme} dienų.`);
+// } else if (statusas === 'mokytojas') {
+//   skolinimosiTrukme = 60;
+//   console.log(`Mokytojas gali skolintis knygą ${skolinimosiTrukme} dienų.`);
+// } else if (statusas === 'narys') {
+//   skolinimosiTrukme = 14;
+//   console.log(
+//     `Bibliotekos narys gali skolintis knygą ${skolinimosiTrukme} dienų.`
+//   );
+// } else {
+//   console.log('Šis asmuo nėra bibliotekos narys ir negali skolintis knygos.');
+// }
