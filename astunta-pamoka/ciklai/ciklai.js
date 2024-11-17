@@ -78,18 +78,97 @@
 // --------------------------
 
 // 1. Parasyti for, kuris isvestu kiekviena skaiciu pradedant nuo 0 ir baigiant 10.
+
+// for (let i = 0; i <= 10; i++) {
+//   switch (i) {
+//     case 0:
+//       console.log('0');
+//       break;
+//     case 1:
+//       console.log('1');
+//       break;
+//     case 2:
+//       console.log('2');
+//       break;
+//     case 3:
+//       console.log('3');
+//       break;
+//     case 4:
+//       console.log('4');
+//       break;
+//     case 5:
+//       console.log('5');
+//       break;
+//     case 6:
+//       console.log('6');
+//       break;
+//     case 7:
+//       console.log('7');
+//       break;
+//     case 8:
+//       console.log('8');
+//       break;
+//     case 9:
+//       console.log('9');
+//       break;
+//     case 10:
+//       console.log('10');
+//       break;
+//   }
+// }
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
+
 // 2. Parasyti for, kuris isvestu kas antra skaiciu pradedant 0 ir baigiant 15.
+
+// for (let i = 0; i <= 15; i ++) {
+//   if (i % 2 === 0) {
+//     console.log('Kas antras skaicius: ' + i);
+//   }
+// }
+
+// Arba
+
+// for (let i = 0; i <= 15; i += 2) {
+//     console.log('Kas antras skaicius: ' + i);
+//   }
+
 // 3. Parasyti for, kuris isvestu kas trecia skaiciu, pradedant 1 ir baigiant 20.
 // Kiekviena skaiciu apskliausti lauztiniais skliaustais. Pvz.: [1][4][7]...
+
+// for (let i = 1; i <= 20; i += 3) {
+//   console.log(`Kas trecias skaicius: [${i}]`);
+// }
+
 // 4. Parasyti for, kuris eitu pro kiekviena skaiciu nuo 1 iki 20. Jame apsirasyti if salyga,
 // kuri patikrintu ar dabartinis skaicius dalinasi is 4, jei taip tai si skaiciu isvesti.
+
+// for (let i = 1; i <= 20; i++) {
+//   if (i % 4 === 0) {
+//     console.log(i);
+//   }
+// }
 
 // 5. Susikurkite kintamuosius reziu pradziai ir pabaigai nusakyti. Patikrinkite, kad tai butu validu
 // (pradzia turi buti mazesne nei pabaiga). Jei reziai tinkami, tuomet vykdyti for,
 // kuris atskirose eilutese isvestu kiekviena skaiciu is tu reziu, bei atskiriant tarpu - tu skaiciu kvadratus.
 
+// for (let i = 1; i <= 20; i++) {
+//   if (i % 4 === 0) {
+//     console.log(i + ' ' + i * i);
+//   }
+// }
+
 // 6. Susikurkite kintamuosius reziu pradziai ir pabaigai nusakyti. Patikrinkite, kad tai butu validu
 // (pradzia turi buti mazesne nei pabaiga). Jei reziai tinkami, tuomet vykdyti for,
 // kuris is duotu skaiciu isvestu visus nelyginius skaicius arba tuos, kurie dalinasi is 8.
+
+// for (let i = 1; i <= 20; i++) {
+//   if (i % 2 !== 0 || i % 8 === 0) {
+//     console.log(i);
+//   }
+// }
 
 // 7. (papildomai, sunkiau) Be daugybos veiksmo programoje, sudauginti du skaicius.
