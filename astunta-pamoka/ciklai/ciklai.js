@@ -123,14 +123,6 @@
 
 // 2. Parasyti for, kuris isvestu kas antra skaiciu pradedant 0 ir baigiant 15.
 
-// for (let i = 0; i <= 15; i ++) {
-//   if (i % 2 === 0) {
-//     console.log('Kas antras skaicius: ' + i);
-//   }
-// }
-
-// Arba
-
 // for (let i = 0; i <= 15; i += 2) {
 //     console.log('Kas antras skaicius: ' + i);
 //   }
@@ -161,6 +153,19 @@
 //   }
 // }
 
+// Arba
+
+// let pradzia = 2;
+// let pabaiga = 8;
+
+// if (pradzia < pabaiga) {
+//   for (let i = pradzia; i <= pabaiga; i++) {
+//     console.log(`${i} ${i * i}`);
+//   }
+// } else {
+//   console.log('pradzia nera mazesne nei pabaiga');
+// }
+
 // 6. Susikurkite kintamuosius reziu pradziai ir pabaigai nusakyti. Patikrinkite, kad tai butu validu
 // (pradzia turi buti mazesne nei pabaiga). Jei reziai tinkami, tuomet vykdyti for,
 // kuris is duotu skaiciu isvestu visus nelyginius skaicius arba tuos, kurie dalinasi is 8.
@@ -171,4 +176,58 @@
 //   }
 // }
 
+// Arba
+
+// let pradzia = 2;
+// let pabaiga = 8;
+
+// if (pradzia < pabaiga) {
+//   for (let i = pradzia; i <= pabaiga; i++) {
+//     if (i % 2 !== 0 || i % 8 === 0) {
+//       console.log(i);
+//     }
+//   }
+// } else {
+//   console.log('pradzia yra didesne arba lygi pabaigai');
+// }
+
+//  % SKAITOSI "MODULIS"
+
 // 7. (papildomai, sunkiau) Be daugybos veiksmo programoje, sudauginti du skaicius.
+
+// let num1 = 5;
+// let num2 = 3;
+// let result = 0;
+
+// for (let i = 0; i < Math.abs(num2); i++) {
+//   result += num1;
+// }
+
+// console.log(result);
+
+// for (let i = 0; i < 3; i++) {
+//   console.log(i);
+// }
+
+// for (let i = 5; i <= 50; i += 5) {
+//   console.log(i);
+// }
+
+// for (let i = 5; i <= 50; i += 5) {
+//   if (i === 20 || i === 50) console.log(i);
+// }
+
+// elementariausias ciklas for
+
+// Lektoriaus
+//
+//
+// let num1 = 5;
+// let num2 = 3;
+// let result = 0;
+
+// for (let i = 0; i < Math.abs(num2); i++) {
+//   result += num1;
+// }
+
+// console.log(result);

@@ -1,5 +1,5 @@
 // Switch statement - palyginimo operatorius
-// Leidzia palyginti kintamaji su daugybe skirtingu reiksmiu
+// Leidzia palyginti vieną kintamaji su daugybe skirtingu reiksmiu
 
 // const day = 2;
 
