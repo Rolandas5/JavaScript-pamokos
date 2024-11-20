@@ -30,3 +30,6 @@
 //   console.log('Prekiu likutis:', prekiuKiekis);
 //   prekiuKiekis--;
 // }
+
+// let tekstas = 'kiek liko'
+// let
