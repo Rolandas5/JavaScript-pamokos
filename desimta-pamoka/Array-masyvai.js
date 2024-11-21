@@ -61,7 +61,7 @@
 
 // ------------------------------------------------
 
-// Pvz. - Nauju nariu idejimas i Masyva - Push metodas
+// Pvz. - Nauju nariu idejimas i Masyva (visada ideda i masyvo gala) - Push metodas
 
 //
 // let naujasProduktas = 'kefyras';
@@ -86,7 +86,7 @@
 // // Pirma nary
 // console.log(skaiciai[0]);
 // // Paskutinis
-// console.log(skaiciai[skaiciai.length - 1]);
+// console.log(skaiciai[skaiciai.length - 1])  reikia rašyti -1 del to, kad visada masyvo indeksai skaiciuojami nulio (0);
 
 // ------------------------------------------------
 
