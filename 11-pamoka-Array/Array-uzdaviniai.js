@@ -127,12 +127,30 @@
 //   }
 // }
 
+// Aba
+
+// const skaiciai = [2, 6, 8, 1, 4, 10, 3, 7];
+// const skaiciaiDidesniUz5 = [];
+// const skaiciaiLength = skaiciai.length;
+
+// for (let i = 0; i < skaiciaiLength; i++) {
+//   const skaicius = skaiciai[i];
+//   if (skaicius > 5) {
+//     skaiciaiDidesniUz5.push(skaicius);
+//   }
+// }
+
+// console.log(skaiciaiDidesniUz5);
+
+// -----------------------------------------------------------
+
 // (10). Susikurkite skaiciu masyva ir uzpildykite ji atsitiktiniais skaiciais. Raskite visu skaiciu, kurie dalinasi 4 suma.
 
 // const skaiciai = [];
+// const limitas = 10;
 // let suma = 0;
 
-// for (let i = 0; i < 10; i++) {
+// for (let i = 0; i < limitas; i++) {
 //   const atsitiktinisSkaicius = Math.floor(Math.random() * 100) + 1;
 //   skaiciai.push(atsitiktinisSkaicius);
 
@@ -144,6 +162,29 @@
 // console.log(`Sukurti atsitiktiniai skaičiai: ${skaiciai}`);
 // console.log(`Skaičių, kurie dalijasi iš 4 suma: ${suma}`);
 
+// -----------------------------------------------------------  Arba
+
+// const skaiciuMasyvas2 = [];
+// const limitas = 10;
+// let sumaIs4 = 0;
+
+// for (let i = 0; i < limitas; i++) {
+//   const randomNumber = Math.floor(Math.random() * 100) + 1;
+//   skaiciuMasyvas2.push(randomNumber);
+// }
+
+// for (let i = 0; i < skaiciuMasyvas2.length; i++) {
+//   const skaicius = skaiciuMasyvas2[i];
+
+//   if (skaicius % 4 === 0) {
+//     console.log(skaicius);
+//     sumaIs4 += skaicius;
+//   }
+// }
+
+// console.log('Suma', sumaIs4);
+
+// -----------------------------------------------------------
 //
 // (11). Susikurkite pazymiu masyva ir uzpildykite ji atsitiktiniais pazymiais. Raskite siu pazymiu vidurki.
 // Isveskite sugeneruotus duomenis ir gauta vidurki.
@@ -164,7 +205,29 @@
 // console.log(`Sukurti atsitiktiniai pažymiai: ${pazymiai}`);
 // console.log(`Pažymių vidurkis: ${vidurkis.toFixed(2)}`);
 
+// ----------------------------------------------------------- Arba
+
+// const pazymiai = [];
+// let sumaPazymiu = 0;
+
+// for (let i = 0; i < 5; i++) {
+//     const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+//     pazymiai.push(randomNumber);
+// }
+
+// for (let i = 0; i < pazymiai.length; i++) {
+//     sumaPazymiu += pazymiai[i];
+// }
+
+// let vidurkis = sumaPazymiu / pazymiai.length;
+
+// console.log('Pazymiai', pazymiai);
+// console.log('Suma', sumaPazymiu);
+// console.log('Vidurkis', vidurkis);
+
 //
+// -----------------------------------------------------------
 
 // (12). Susikurkite pazymiu masyva ir uzpildykite ji atsitiktiniais pazymiais. Raskite siu pazymiu vidurki.
 // Isveskite visus skaicius, kurie yra didesni nei vidurkis.
@@ -175,23 +238,24 @@
 // for (let i = 0; i < 10; i++) {
 //   let atsitiktinisSkaicius = Math.floor(Math.random() * 10) + 1;
 //   pazymiai.push(atsitiktinisSkaicius);
-//   pazymiuSuma += atsitiktinisSkaicius;
+// }
+
+// for (let i = 0; i < pazymiai.length; i++) {
+//   pazymiuSuma += pazymiai[i];
 // }
 
 // let vidurkis = pazymiuSuma / pazymiai.length;
-// let didesniUzVidurki = [];
 
 // for (let i = 0; i < pazymiai.length; i++) {
 //   if (pazymiai[i] > vidurkis) {
-//     didesniUzVidurki.push(pazymiai[i]);
+//     console.log(`Pažymiai didesni už vidurkį: ${pazymiai[i]}`);
 //   }
 // }
 
 // console.log(`Sukurti atsitiktiniai pažymiai: ${pazymiai}`);
 // console.log(`Pažymių vidurkis: ${vidurkis.toFixed(2)}`);
-// console.log(`Pažymiai didesni už vidurkį: ${didesniUzVidurki}`);
 
-//
+// -----------------------------------------------------------
 //
 // (13). Susikurkite skaiciu masyva ir uzpildykiye ji duomenimis. Isveskite visus skaicius atskirose eilutese.
 // Prie kiekvieno lyginio skaiciaus dar isvedant jo kvardata.
@@ -201,14 +265,14 @@
 
 // for (let i = 0; i < skaiciai.length; i++) {
 //   let skaicius = skaiciai[i];
-//   console.log(`Skaičius: ${skaicius}`);
-
 //   if (skaicius % 2 === 0) {
-//     console.log(`Jo kvadratas: ${skaicius ** 2}`);
+//     console.log(`${skaicius} jo kvadratas: ${skaicius ** 2}`);
+//   } else {
+//     console.log(`Skaičius: ${skaicius}`);
 //   }
 // }
 
-//
+// -----------------------------------------------------------
 //
 
 // (14). Susikurkite studento pazymiu masyva ir uzpildykiye ji duomenimis atsitiktiniais arba kokius irasysite.
@@ -217,6 +281,7 @@
 // Teigiamas pazymys yra 5.
 
 // let studentoPazymiai = [];
+// let minimalusTeigiamas = 5;
 
 // for (let i = 0; i < 10; i++) {
 //   let atsitiktinisSkaicius = Math.floor(Math.random() * 10) + 1;
@@ -228,59 +293,55 @@
 
 //   console.log(`Pazymys: ${pazymys}`);
 
-//   if (pazymys >= 5) {
-//     console.log(`Teigiamas pazymys.`);
+//   if (pazymys >= minimalusTeigiamas) {
+//     console.log(`Teigiamas pazymys ${pazymys}`);
 //   } else {
-//     console.log(`Neigiamas pazymys.`);
-//     console.log(`Truksta ${5 - pazymys} balu iki teigiamo pazymio.`);
+//     let truksta = minimalusTeigiamas - pazymys;
+//     console.log(`Neigiamas pazymys ${pazymys}`);
+//     console.log(`Truksta ${truksta} balu iki teigiamo pazymio.`);
 //   }
 // }
 
-//
+// -----------------------------------------------------------
 //
 // (15). Susikurkite zodziu masyva ir uzpildykite dumenimis. Isveskite visus zodzius ekrane,
 // nurodant is kiek raidziu kiekvienas sis zodis yra sudarytas. Papildykite scripta taip, kad rastumete visu raidziu kieki
 // (pvz yra zodziai "medis" ir "alus", 5 ir 4 raides atitinkamai, o jas sudejus gaunasi 9 raides.)
 
 // let zodziai = ['kede', 'kepure', 'pelke', 'grybas', 'kempine'];
-// let raidziuKiekis = 0;
+// let bendrasRaidziuKiekis = 0;
 
 // for (let i = 0; i < zodziai.length; i++) {
-//   let zodis = zodziai[i];
-//   raidziuKiekis += zodis.length;
-//   console.log(`Zodis: "${zodis}" yra sudarytas is ${zodis.length} simboliu.`);
+//   let raidziuKiekis = zodziai[i].length;
+//   bendrasRaidziuKiekis += raidziuKiekis;
+//   console.log(`Zodis: "${zodziai[i]}" yra sudarytas is ${raidziuKiekis} simboliu.`);
 // }
 
-// console.log(`Visuose zodziuose esanciu raidziu suma: ${raidziuKiekis}`);
+// console.log(`Visuose zodziuose esanciu raidziu suma: ${bendrasRaidziuKiekis}`);
 
-//
+// -----------------------------------------------------------
 //
 // (16). Susikurkite skaiciu masyva ir uzpildykite duomenimis. Raskite visu skaiciu, kurie dalinasi is 3 suma ir vidurki.
 // Isveskite pradinius duomenis ir gautus atsakymus.
 //
 
-// let skaiciai = [8, 9, 6, 18, 10, 27, 5, 3];
+// const skaiciai = [8, 9, 6, 18, 10, 27, 5, 3];
 // let skaiciuSuma = 0;
 // let skaiciuKiekis = 0;
 
 // for (let i = 0; i < skaiciai.length; i++) {
-//   let skaicius = skaiciai[i];
+//   const skaicius = skaiciai[i];
+
 //   if (skaicius % 3 === 0) {
 //     skaiciuSuma += skaicius;
 //     skaiciuKiekis++;
 //   }
 // }
 
-// let vidurkis;
-
-// if (skaiciuKiekis > 0) {
-//   vidurkis = skaiciuSuma / skaiciuKiekis;
-// } else {
-//   vidurkis = 0;
-// }
+// let vidurkis = skaiciuSuma / skaiciuKiekis;
 
 // console.log(`Pradiniai duomenys: ${skaiciai}`);
 // console.log(`Skaiciu suma, kurie dalinasi is 3: ${skaiciuSuma}`);
 // console.log(`Vidurkis: ${vidurkis.toFixed(1)}`);
-//
+// //
 //
