@@ -208,69 +208,69 @@
 
 // 3.
 
-const knyga1 = {
-  pavadinimas: 'Greiti ir isiute',
-  autorius: 'Salomeja Neris',
-  zanras: 'poezija',
-  kaina: 25,
-  puslapiai: 360,
-  skyriu_sarasas: [
-    'Turinys',
-    'Preambule',
-    'Ivadas',
-    'Pasiruosimas',
-    'Kova su laiku',
-    'Poilsis ir ispazintis',
-    'Sugrizimas',
-    'Pabaiga',
-  ],
-  isleidimo_metai: 2010,
-  arKnygynuose: true,
-};
+// const knyga1 = {
+//   pavadinimas: 'Greiti ir isiute',
+//   autorius: 'Salomeja Neris',
+//   zanras: 'poezija',
+//   kaina: 25,
+//   puslapiai: 360,
+//   skyriu_sarasas: [
+//     'Turinys',
+//     'Preambule',
+//     'Ivadas',
+//     'Pasiruosimas',
+//     'Kova su laiku',
+//     'Poilsis ir ispazintis',
+//     'Sugrizimas',
+//     'Pabaiga',
+//   ],
+//   isleidimo_metai: 2010,
+//   arKnygynuose: true,
+// };
 
-const knyga2 = {
-  pavadinimas: 'Pingvinas Fredis',
-  autorius: 'Kestutis Geda',
-  zanras: 'tautosaka',
-  kaina: 15,
-  puslapiai: 250,
-  skyriu_sarasas: [
-    'Turinys',
-    'Ivadas',
-    'Tuscios lankos',
-    'As greitesnis',
-    'Geriausias zingsnis',
-    'Pabaiga',
-  ],
-  isleidimo_metai: 1960,
-  arKnygynuose: true,
-};
+// const knyga2 = {
+//   pavadinimas: 'Pingvinas Fredis',
+//   autorius: 'Kestutis Geda',
+//   zanras: 'tautosaka',
+//   kaina: 15,
+//   puslapiai: 250,
+//   skyriu_sarasas: [
+//     'Turinys',
+//     'Ivadas',
+//     'Tuscios lankos',
+//     'As greitesnis',
+//     'Geriausias zingsnis',
+//     'Pabaiga',
+//   ],
+//   isleidimo_metai: 1960,
+//   arKnygynuose: true,
+// };
 
-console.log('Pirmos knygos informacija:', knyga1);
-console.log('Antrosios knygos informacija:', knyga2);
+// console.log('Pirmos knygos informacija:', knyga1);
+// console.log('Antrosios knygos informacija:', knyga2);
 
-if (knyga1.puslapiai > knyga2.puslapiai) {
-  console.log('Antra knyga plonesne');
-} else if (knyga1.puslapiai < knyga2.puslapiai) {
-  console.log('Pirma knyga plonesne');
-} else {
-  console.log('Abi knygos vienodos');
-}
+// if (knyga1.puslapiai > knyga2.puslapiai) {
+//   console.log('Antra knyga plonesne');
+// } else if (knyga1.puslapiai < knyga2.puslapiai) {
+//   console.log('Pirma knyga plonesne');
+// } else {
+//   console.log('Abi knygos vienodos');
+// }
 
-if (knyga1.skyriu_sarasas.length > knyga2.skyriu_sarasas.length) {
-  console.log('Pirmoje knygoje daugiau skyriu');
-} else if (knyga1.skyriu_sarasas < knyga2.skyriu_sarasas) {
-  console.log('Pirmoje knygoje daugiau skyriu');
-} else {
-  console.log('Abiejose knygose vienodas skyriu skaicius');
-}
+// if (knyga1.skyriu_sarasas.length > knyga2.skyriu_sarasas.length) {
+//   console.log('Pirmoje knygoje daugiau skyriu');
+// } else if (knyga1.skyriu_sarasas < knyga2.skyriu_sarasas) {
+//   console.log('Pirmoje knygoje daugiau skyriu');
+// } else {
+//   console.log('Abiejose knygose vienodas skyriu skaicius');
+// }
 
-if (knyga2.kaina * 2 > knyga1.kaina) {
-  console.log(
-    'Antros knygos kaina po padvigubinimo būtų didesnė nei pirmosios'
-  );
-} else {
-  console.log(
-    'Antros knygos kaina po padvigubinimo nebūtų didesnė nei pirmosios'
-  );
-}
+// if (knyga2.kaina * 2 > knyga1.kaina) {
+//   console.log(
+//     'Antros knygos kaina po padvigubinimo būtų didesnė nei pirmosios'
+//   );
+// } else {
+//   console.log(
+//     'Antros knygos kaina po padvigubinimo nebūtų didesnė nei pirmosios'
+//   );
+// }
