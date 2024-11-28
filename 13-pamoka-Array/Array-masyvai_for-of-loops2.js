@@ -189,7 +189,17 @@
 // Isveskite atsakymus atskirose eilutese, nurodant kiek yra dabar ir kiek dienu uzteks jo.
 // Pavyzdziui, jeigu likuciai 74, 54 ir 32, tai 74 vnt. prekes uzteks mazdaug 15 dienu, 54 vnt. prekes uzteks mazdaug 11 dienu ir t.t.
 
-//
+// let sandelioLikutis = [74, 54, 32, 90, 120];
+// let perDienaPerkma = 5;
+
+// for (let likutis of sandelioLikutis) {
+//     let dienuUzteks = Math.ceil(likutis / perDienaPerkma);
+
+//     console.log(`${likutis} vnt., prekes uzteks mazdaug ${dienuUzteks}`);
+// }
+
+// PVZ -----------------------  Arba telefone persirasyti Rutos Jakutes PVZ.:
+
 //
 // (25). Susikurkite masyva studento pazymiams saugoti. Uzpildykitye si masyva atsitiktinai sugeneruotais pazymiais.
 // Raskite vidurki. Raskite kiek neigiamu pazymiu studentas gavo (mazesniu nei 5).
@@ -232,4 +242,122 @@
 // console.log(`Neigiamu pazymiu kiekis: ${kiekisNeigiamu}`);
 // console.log(`Neigiamų pažymių vidurkis: ${vidurkisNeigiamu.toFixed(0)}`);
 
-//-----------
+// PVZ -----------------------  Arba Lektoriaus PVZ.:  geras pavyzdys:
+//
+
+// let pazymiai = Array.from({ length: 3 }, () => Math.floor(Math.random() * 10) + 1);
+
+// let suma = 0;
+// let neigiamuKiekis = 0;
+
+// for (let pazymys of pazymiai) {
+//   suma += pazymys
+//   if (pazymys < 5) {
+//     neigiamuKiekis++
+//   }
+// }
+
+// let vidurkis = suma / pazymiai.length;
+
+// console.log('Vidurkis:', vidurkis.toFixed(0));
+// console.log('Neigiamiu pazymiu kiekis:', neigiamuKiekis)
+
+//
+// PVZ -----------------------
+
+// (26). Susikurkite du pazymiu masyvus, kur vienas masyvas reiks vieno studento pazymius, kitas masyvas kito studento pazymius.
+// Raskite kiekvieno studento studento pazymiu vidurki. Isveskite abieju studentu pazymius, vidurkius ir nurodykite kuris
+// studentas turi didesni vidurki.
+
+// const pirmoStudentoPazymiai = [7, 10, 6, 9, 5, 9];
+// const antroStudentoPazymiai = [5, 5, 5, 6, 5, 6];
+// let pirmoSuma = 0;
+// let antroSuma = 0;
+
+// for (const pirmoPazymys of pirmoStudentoPazymiai) {
+//   console.log(`Pirmo studento pazymiai: ${pirmoPazymys}`);
+//   pirmoSuma += pirmoPazymys;
+// }
+
+// let vidurkisPirmoStudento = pirmoSuma / pirmoStudentoPazymiai.length;
+// console.log(
+//   `Pirmo studento pazymiu vidurkis: ${vidurkisPirmoStudento.toFixed(0)}`
+// );
+
+// for (const antroPazymys of antroStudentoPazymiai) {
+//   console.log(`Antro studento pazymiai: ${antroPazymys}`);
+//   antroSuma += antroPazymys;
+// }
+
+// let vidurkisAntroStudento = antroSuma / antroStudentoPazymiai.length;
+// console.log(
+//   `Antro studento pazymiu vidurkis: ${vidurkisAntroStudento.toFixed(0)}`
+// );
+
+// if (vidurkisPirmoStudento > vidurkisAntroStudento) {
+//   console.log('Pirmasis vidurkis yra didesnis už antraji.');
+// } else if (vidurkisPirmoStudento < vidurkisAntroStudento) {
+//   console.log('Antrasis vidurkis yra didesnis už pirmaji.');
+// } else {
+//   console.log('Abu vidurkiai yra lygūs.');
+// }
+
+// PVZ ------------------------------------------ Arba LEKTORIAUS:
+
+// let studentoPazymiai1 = [8, 7, 8, 9, 10];
+// let studentoPazymiai2 = [5, 7, 8, 9, 4];
+
+// Pirmo studento vidurkis
+// let suma1 = 0;
+// for (let pazymys of studentoPazymiai1) {
+//     suma1 += pazymys;
+// }
+
+// let vidurkis1 = suma1 / studentoPazymiai1.length;
+
+// console.log('Pirmo studento vidurkis', vidurkis1);
+
+// Antro studento vidurkis
+// let suma2 = 0;
+// for (let pazymys of studentoPazymiai2) {
+//   suma2 += pazymys;
+// }
+
+// let vidurkis2 = suma2 / studentoPazymiai2.length;
+
+// console.log('Antro studento vidurkis', vidurkis2);
+
+// if (vidurkis1 > vidurkis2) {
+//   console.log('Pirmo studento vidurkis didesnis')
+// } else if (vidurkis2 > vidurkis1) {
+//   console.log('Antro studento vidurkis didesnis')
+// } else {
+//   console.log('Abieju studentu vidurkiai vienodi');
+// }
+
+// (27). Susikurkite masyva norimiems zodziams saugoti. Uzpildykite si masyva duomenimis.
+// I kita masyva atrinkite tuos zodzius, kurie yra trumpi (sudaro maziau nei 5 raides). Isveskite pradinius duomenis ir atrinktus.
+
+// const zodziai = ['antis', 'Meja', 'Asla', 'Ola', 'Maryte', 'bite', 'kepalas'];
+// const trumpiZodziai = [];
+
+// for (let zodis of zodziai) {
+//   if (zodis.length < 5) {
+//     trumpiZodziai.push(zodis);
+//   }
+// }
+
+// console.log(`Zodziai, kuriuos sudaro maziau nei 5 raides: ${trumpiZodziai}`);
+
+// // PVZ ------------------------------------------ Arba LEKTORIAUS:
+
+// const zodziai = ['meds', 'namas', 'tortas', 'masi'];
+// const trumpiZodziai = ['abc'];
+
+// for (let zodis of zodziai) {
+//   if (zodis.length < 5) {
+//     trumpiZodziai.push(zodis);
+//   }
+// }
+
+// console.log(trumpiZodziai);
