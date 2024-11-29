@@ -274,3 +274,83 @@
 //     'Antros knygos kaina po padvigubinimo nebūtų didesnė nei pirmosios'
 //   );
 // }
+
+// Užduotys (4/6)
+
+// 4.
+
+// Sukurkite tris objektus prekių duomenims saugoti. Kiekviename objekte sudėkite šias savybes su reikšmėmis:
+// pavadinimas, kaina, savikaina, kodas, turimas kiekis sandėlyje, siuntimui dėžės matmenys (x, y, z ašys).
+// Išveskite visų trijų prekių informaciją. Išveskite visų prekių kainas vienoje eilutėje (pirma prekė kainuoja - ...,
+// antra prekė kainuoja - ..., ir t.t.).
+// Raskite ir išveskite, kuri prekė yra brangiausia (jos pavadinimą ir kainą arba visą rastos prekės informaciją).
+// Raskite ir išveskite atskirose eilutėse kiekvienos prekės dėžės tūrį.
+// Raskite ir išveskite atskirose eilutėse kiekvienos prekės pelningumą ((kaina - savikaina) * kiekis sandėlyje).
+
+const prekeSuknele = {
+  pavadinimas: 'MINIMI proginė',
+  kaina: 110,
+  savikaina: 80,
+  kodas: '2236458',
+  kiekis_sandelyje: 75,
+  pakuote: '50 x 60 x 8',
+};
+
+const prekePaltas = {
+  pavadinimas: 'Matcha',
+  kaina: 150,
+  savikaina: 90,
+  kodas: '11197856',
+  kiekis_sandelyje: 10,
+  pakuote: '60 x 40 x 15',
+};
+
+const prekeKostiumas = {
+  pavadinimas: 'Disco/Retro',
+  kaina: 170,
+  savikaina: 100,
+  kodas: '00020058',
+  kiekis_sandelyje: 170,
+  pakuote: '60 x 40 x 15',
+};
+
+console.log('Prekė suknelė:', prekeSuknele);
+console.log('Prekė paltas:', prekePaltas);
+console.log('Prekė kostiumas:', prekeKostiumas);
+
+console.log(
+  'Suknelės kaina -',
+  prekeSuknele.kaina,
+  'eurai',
+  'Palto kaina -',
+  prekePaltas.kaina,
+  'eurai',
+  'Kostiumo kaina -',
+  prekeKostiumas.kaina,
+  'eurai'
+);
+
+if (knyga2.kaina * 2 > knyga1.kaina) {
+  console.log(
+    'Antros knygos kaina po padvigubinimo būtų didesnė nei pirmosios'
+  );
+} else {
+  console.log(
+    'Antros knygos kaina po padvigubinimo nebūtų didesnė nei pirmosios'
+  );
+}
+
+
+
+// Užduotys (5/6)
+
+// 5.
+
+// Sukurkite objektą automobilio duomenims saugoti. Į šį objektą savybes su reikšmėmis sukelkite,
+// po to kai sukursite tuščią objektą (10-as pavyzdys).
+// Sudėkite šias savybes su reikšmėmis: markė, modelis, rida, gamybos metai, spalva, darbinis tūris, ar daužta, ar parduodama.
+// Išveskite visą automobilio informaciją.
+// Paskaičiuokite ir išveskite, kiek automobiliui yra metų (rankomis įrašykite dabartinius metus arba panaudokite
+// new Date(Date.now()).getFullYear() funkciją).
+// Paskaičiuokite ir išveskite, kiek vidutiniškai per metus yra nuvažiavęs automobilis (jeigu viso nuvažiavo 300 kilometrų,
+// o automobiliui yra 2 metai, tai per metus vidutiniškai gaunasi 150 km.).
