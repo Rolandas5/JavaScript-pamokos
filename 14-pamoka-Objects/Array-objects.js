@@ -330,17 +330,12 @@ console.log(
   'eurai'
 );
 
-if (knyga2.kaina * 2 > knyga1.kaina) {
-  console.log(
-    'Antros knygos kaina po padvigubinimo būtų didesnė nei pirmosios'
-  );
-} else {
-  console.log(
-    'Antros knygos kaina po padvigubinimo nebūtų didesnė nei pirmosios'
-  );
-}
-
-
+let brangiausiaPreke = Math.max(
+  prekeSuknele.kaina,
+  prekePaltas.kaina,
+  prekeKostiumas.kaina
+);
+console.log('Brangiausia preke:', brangiausiaPreke);
 
 // Užduotys (5/6)
 
