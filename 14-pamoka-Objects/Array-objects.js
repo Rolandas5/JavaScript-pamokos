@@ -135,7 +135,11 @@
 
 // Uzdaviniai 1/5 -------------------------
 
-// 1.
+// 1. Sukurkite objektą studento duomenims saugoti. Į šį objektą sudėkite tokias savybes su reikšmėmis:
+// vardas, pavardė, amžius, studijų programa, atsiskaitytų kreditų skaičius, pažymiai, ūgis, kelintame kurse mokosi,
+// kurioje mokykloje mokosi. Šiuos duomenis galite grupuoti į vidinius objektus arba visus išrašyti atskirai.
+// Išveskite šią informaciją per vieną console.log().
+// Taip pat, pamėginkite išvesti atskirose eilutėse tris skirtingas pasirinktas savybes.
 
 // const studentoDuomenys = {
 //   vardas: 'Antanas',
@@ -170,7 +174,12 @@
 
 // Uzdaviniai 2/5 -------------------------
 
-// 2.
+// 2. Sukurkite objektą informacijai apie filmą saugoti. Į šį objektą sudėkite tokias savybes su reikšmėmis:
+// pavadinimas, režisierius, biudžetas, kiek uždirbo pinigų po išleidimo, žanras, trukmė, išleidimo metai,
+// aktorių sąrašas (masyvas su jų vardais ir pavardėmis). Išveskite šio objekto informaciją.
+// Paskaičiuokite ir išveskite šio filmo pelną (uždarbis - biudžetas). Išveskite kiek filme dalyvavo aktorių (jų kiekis).
+// Paskaičiuokite kiek filmui yra metų (dabartinius metus tiesiog galite įrašyti rankomis
+// arba panaudoti new Date(Date.now()).getFullYear() funkciją).
 
 // const filmoInformacija = {
 //   pavadinimas: 'Greiti ir isiute',
@@ -206,7 +215,11 @@
 
 // Uzdaviniai 3/5 -------------------------
 
-// 3.
+// 3. Sukurkite du objektus dviejų knygų informacijai saugoti. Kiekviename objekte nurodykite tokias savybes su reikšmėmis:
+// pavadinimas, autorius, žanras, kaina, puslapių kiekis, skyrių sąrašas (masyvas su pavadinimais), išleidimo metai,
+// ar knygą galima rasti knygynuose. Išveskite šių knygų informaciją. Išveskite kuri knyga plonesnė (turi mažiau puslapių),
+// bei kurioje knygoje yra daugiau skyrių. Paskaičiuokite, jeigu pigesnės knygos kainą padvigubintumėte,
+// ar ji jau būtų brangesnė už kitą knygą?
 
 // const knyga1 = {
 //   pavadinimas: 'Greiti ir isiute',
@@ -288,30 +301,33 @@
 // Raskite ir išveskite atskirose eilutėse kiekvienos prekės pelningumą ((kaina - savikaina) * kiekis sandėlyje).
 
 const prekeSuknele = {
+  rusis: 'Prekė suknelė',
   pavadinimas: 'MINIMI proginė',
   kaina: 110,
   savikaina: 80,
   kodas: '2236458',
   kiekis_sandelyje: 75,
-  pakuote: '50 x 60 x 8',
+  pakuotes_matmenys: { ilgis: 50, plotis: 60, aukstis: 8 },
 };
 
 const prekePaltas = {
+  rusis: 'Prekė paltas',
   pavadinimas: 'Matcha',
   kaina: 150,
   savikaina: 90,
   kodas: '11197856',
   kiekis_sandelyje: 10,
-  pakuote: '60 x 40 x 15',
+  pakuotes_matmenys: { ilgis: 60, plotis: 40, aukstis: 15 },
 };
 
 const prekeKostiumas = {
+  rusis: 'Prekė kostiumas',
   pavadinimas: 'Disco/Retro',
   kaina: 170,
   savikaina: 100,
   kodas: '00020058',
   kiekis_sandelyje: 170,
-  pakuote: '60 x 40 x 15',
+  pakuotes_matmenys: { ilgis: 55, plotis: 25, aukstis: 10 },
 };
 
 console.log('Prekė suknelė:', prekeSuknele);
@@ -319,24 +335,25 @@ console.log('Prekė paltas:', prekePaltas);
 console.log('Prekė kostiumas:', prekeKostiumas);
 
 console.log(
-  'Suknelės kaina -',
-  prekeSuknele.kaina,
-  'eurai',
-  'Palto kaina -',
-  prekePaltas.kaina,
-  'eurai',
-  'Kostiumo kaina -',
-  prekeKostiumas.kaina,
-  'eurai'
+  `Suknelės kaina - ${prekeSuknele.kaina} eurai, Palto kaina - ${prekePaltas.kaina} eurai, Kostiumo kaina - ${prekeKostiumas.kaina} eurai`
 );
 
-let brangiausiaPreke = Math.max(
+const didziausiaKaina = Math.max(
   prekeSuknele.kaina,
   prekePaltas.kaina,
   prekeKostiumas.kaina
 );
-console.log('Brangiausia preke:', brangiausiaPreke);
 
+const brangiausiaPreke = [prekeSuknele, prekePaltas, prekeKostiumas].find(
+  (preke) => preke.kaina === didziausiaKaina
+);
+
+console.log(
+  `Brangiausia prekė yra ${brangiausiaPreke.rusis} (${brangiausiaPreke.pavadinimas}), kurios kaina yra ${brangiausiaPreke.kaina} eurai.`
+);
+console.log('Prekės informacija: ', brangiausiaPreke);
+
+//
 // Užduotys (5/6)
 
 // 5.
