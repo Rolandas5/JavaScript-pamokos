@@ -106,7 +106,7 @@
 
 //   console.log(darbuotojas.atlyginimas);
 
-// Ikelia i vidu ---------------------------
+// Ikelia i objekto vidu ---------------------------
 
 // let darbuotojas = {};
 
@@ -300,59 +300,87 @@
 // Raskite ir išveskite atskirose eilutėse kiekvienos prekės dėžės tūrį.
 // Raskite ir išveskite atskirose eilutėse kiekvienos prekės pelningumą ((kaina - savikaina) * kiekis sandėlyje).
 
-const prekeSuknele = {
-  rusis: 'Prekė suknelė',
-  pavadinimas: 'MINIMI proginė',
-  kaina: 110,
-  savikaina: 80,
-  kodas: '2236458',
-  kiekis_sandelyje: 75,
-  pakuotes_matmenys: { ilgis: 50, plotis: 60, aukstis: 8 },
-};
+// const prekeSuknele = {
+//   rusis: 'Prekė suknelė',
+//   pavadinimas: 'MINIMI proginė',
+//   kaina: 110,
+//   savikaina: 80,
+//   kodas: '2236458',
+//   kiekis_sandelyje: 75,
+//   pakuotes_matmenys: { ilgis: 50, plotis: 60, aukstis: 8 },
+// };
 
-const prekePaltas = {
-  rusis: 'Prekė paltas',
-  pavadinimas: 'Matcha',
-  kaina: 150,
-  savikaina: 90,
-  kodas: '11197856',
-  kiekis_sandelyje: 10,
-  pakuotes_matmenys: { ilgis: 60, plotis: 40, aukstis: 15 },
-};
+// const prekePaltas = {
+//   rusis: 'Prekė paltas',
+//   pavadinimas: 'Matcha',
+//   kaina: 150,
+//   savikaina: 90,
+//   kodas: '11197856',
+//   kiekis_sandelyje: 10,
+//   pakuotes_matmenys: { ilgis: 60, plotis: 40, aukstis: 15 },
+// };
 
-const prekeKostiumas = {
-  rusis: 'Prekė kostiumas',
-  pavadinimas: 'Disco/Retro',
-  kaina: 170,
-  savikaina: 100,
-  kodas: '00020058',
-  kiekis_sandelyje: 170,
-  pakuotes_matmenys: { ilgis: 55, plotis: 25, aukstis: 10 },
-};
+// const prekeKostiumas = {
+//   rusis: 'Prekė kostiumas',
+//   pavadinimas: 'Disco/Retro',
+//   kaina: 170,
+//   savikaina: 100,
+//   kodas: '00020058',
+//   kiekis_sandelyje: 170,
+//   pakuotes_matmenys: { ilgis: 55, plotis: 25, aukstis: 10 },
+// };
 
-console.log('Prekė suknelė:', prekeSuknele);
-console.log('Prekė paltas:', prekePaltas);
-console.log('Prekė kostiumas:', prekeKostiumas);
+// console.log('Prekė suknelė:', prekeSuknele);
+// console.log('Prekė paltas:', prekePaltas);
+// console.log('Prekė kostiumas:', prekeKostiumas);
 
-console.log(
-  `Suknelės kaina - ${prekeSuknele.kaina} eurai, Palto kaina - ${prekePaltas.kaina} eurai, Kostiumo kaina - ${prekeKostiumas.kaina} eurai`
-);
+// console.log(
+//   `Suknelės kaina - ${prekeSuknele.kaina} eurai, Palto kaina - ${prekePaltas.kaina} eurai, Kostiumo kaina - ${prekeKostiumas.kaina} eurai`
+// );
 
-const didziausiaKaina = Math.max(
-  prekeSuknele.kaina,
-  prekePaltas.kaina,
-  prekeKostiumas.kaina
-);
+// const didziausiaKaina = Math.max(
+//   prekeSuknele.kaina,
+//   prekePaltas.kaina,
+//   prekeKostiumas.kaina
+// );
 
-const brangiausiaPreke = [prekeSuknele, prekePaltas, prekeKostiumas].find(
-  (preke) => preke.kaina === didziausiaKaina
-);
+// const brangiausiaPreke = [prekeSuknele, prekePaltas, prekeKostiumas].find(
+//   (preke) => preke.kaina === didziausiaKaina
+// );
 
-console.log(
-  `Brangiausia prekė yra ${brangiausiaPreke.rusis} (${brangiausiaPreke.pavadinimas}), kurios kaina yra ${brangiausiaPreke.kaina} eurai.`
-);
-console.log('Prekės informacija: ', brangiausiaPreke);
+// console.log(
+//   `Brangiausia prekė yra ${brangiausiaPreke.rusis} (${brangiausiaPreke.pavadinimas}), kurios kaina yra ${brangiausiaPreke.kaina} eurai.`
+// );
+// console.log('Prekės informacija: ', brangiausiaPreke);
 
+// let turisPrekeSuknele =
+//   prekeSuknele.pakuotes_matmenys.aukstis *
+//   prekeSuknele.pakuotes_matmenys.ilgis *
+//   prekeSuknele.pakuotes_matmenys.plotis;
+// let turisPrekePaltas =
+//   prekePaltas.pakuotes_matmenys.aukstis *
+//   prekePaltas.pakuotes_matmenys.ilgis *
+//   prekePaltas.pakuotes_matmenys.plotis;
+// let turisPrekeKostiumas =
+//   prekeKostiumas.pakuotes_matmenys.aukstis *
+//   prekeKostiumas.pakuotes_matmenys.ilgis *
+//   prekeKostiumas.pakuotes_matmenys.plotis;
+
+// console.log(`Prekė: suknelės pakuotės dėžės tūris: ${turisPrekeSuknele} cm3`);
+// console.log(`Prekė: palto pakuotės dėžės tūris: ${turisPrekePaltas} cm3`);
+// console.log(`Prekė: kostiumo pakuotės dėžės tūris: ${turisPrekeKostiumas} cm3`);
+
+// let pelningumasPrekeSuknele =
+//   (prekeSuknele.kaina - prekeSuknele.savikaina) * prekeSuknele.kiekis_sandelyje;
+// let pelningumasPrekePaltas =
+//   (prekePaltas.kaina - prekePaltas.savikaina) * prekePaltas.kiekis_sandelyje;
+// let = pelningumasPrekeKostiumas =
+//   (prekeKostiumas.kaina - prekeKostiumas.savikaina) *
+//   prekeKostiumas.kiekis_sandelyje;
+
+// console.log(`Prekės suknelė pelningumas: ${pelningumasPrekeSuknele} Eur`);
+// console.log(`Prekės paltas pelningumas: ${pelningumasPrekePaltas} Eur`);
+// console.log(`Prekės kostiumas pelningumas: ${pelningumasPrekeKostiumas} Eur`);
 //
 // Užduotys (5/6)
 
@@ -366,3 +394,29 @@ console.log('Prekės informacija: ', brangiausiaPreke);
 // new Date(Date.now()).getFullYear() funkciją).
 // Paskaičiuokite ir išveskite, kiek vidutiniškai per metus yra nuvažiavęs automobilis (jeigu viso nuvažiavo 300 kilometrų,
 // o automobiliui yra 2 metai, tai per metus vidutiniškai gaunasi 150 km.).
+
+//
+
+// const automobilis = {};
+
+// automobilis.marke = 'Toyota';
+// automobilis.modelis = 'Corolla';
+// automobilis.rida = 120000;
+// automobilis.gamybosMetai = 2015;
+// automobilis.spalva = 'Pilka';
+// automobilis.darbinisTuris = 1.8;
+// automobilis.arDauzta = true;
+// automobilis.arParduodama = false;
+
+// console.log('Automobilio informacija:', automobilis);
+
+// const dabartiniaiMetai = new Date().getFullYear();
+// const automobilioAmzius = dabartiniaiMetai - automobilis.gamybosMetai;
+// console.log(`Automobiliui yra ${automobilioAmzius} metai.`);
+
+// const vidutineRidaPerMetus = automobilis.rida / automobilioAmzius;
+// console.log(
+//   `Automobilis vidutiniškai per metus nuvažiuoja ${vidutineRidaPerMetus.toFixed(
+//     2
+//   )} km.`
+// );
