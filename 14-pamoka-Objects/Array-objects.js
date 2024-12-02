@@ -262,21 +262,106 @@
 // console.log('Pirmos knygos informacija:', knyga1);
 // console.log('Antrosios knygos informacija:', knyga2);
 
-// if (knyga1.puslapiai > knyga2.puslapiai) {
-//   console.log('Antra knyga plonesne');
-// } else if (knyga1.puslapiai < knyga2.puslapiai) {
-//   console.log('Pirma knyga plonesne');
+// if (knyga1.puslapiai < knyga2.puslapiai) {
+//   console.log(
+//     `Plonesne knyga "${knyga1.pavadinimas}", ji turi ${knyga1.puslapiai} puslapių`
+//   );
+// } else if (knyga1.puslapiai > knyga2.puslapiai) {
+//   console.log(
+//     `Plonesne knyga "${knyga2.pavadinimas}", ji turi ${knyga2.puslapiai} puslapių`
+//   );
 // } else {
 //   console.log('Abi knygos vienodos');
 // }
 
 // if (knyga1.skyriu_sarasas.length > knyga2.skyriu_sarasas.length) {
-//   console.log('Pirmoje knygoje daugiau skyriu');
-// } else if (knyga1.skyriu_sarasas < knyga2.skyriu_sarasas) {
-//   console.log('Pirmoje knygoje daugiau skyriu');
+//   console.log(`Daugiau skyrių turi "${knyga1.pavadinimas}" `);
+// } else if (knyga1.skyriu_sarasas.length < knyga2.skyriu_sarasas.length) {
+//   console.log(`Daugiau skyrių turi "${knyga2.pavadinimas}" `);
 // } else {
-//   console.log('Abiejose knygose vienodas skyriu skaicius');
+//   console.log('Abiejose knygose vienodas skyriu skaičius');
 // }
+
+// const pigesneKnyga = knyga1.kaina < knyga2.kaina ? knyga1 : knyga2;
+// // console.log(pigesneKnyga);
+
+// const brangesneKnyga = knyga1.kaina > knyga2.kaina ? knyga1 : knyga2;
+// // console.log(brangesneKnyga);
+
+// const dvigubaKaina = pigesneKnyga.kaina * 2;
+
+// if (dvigubaKaina > brangesneKnyga.kaina) {
+//   console.log(
+//     `Padvigubinus kaina yra brangesne knyga "${brangesneKnyga.pavadinimas}"`
+//   );
+// } else {
+//   console.log(
+//     `Net padvigubinus kaina, visvien "${brangesneKnyga.pavadinimas}" yra brangesne`
+//   );
+// }
+
+// LEKTORIAUS PAVYZDYS: ------------------------
+
+// const book1 = {
+//     title: 'Nuotykiai prie juros',
+//     author: 'Thomas Thomason',
+//     genre: 'adventure',
+//     price: 15.99,
+//     pages: 2500,
+//     chapters: ['Izanga', 'Pradzia', 'Paslaptis', 'Pabaiga'],
+//     year: 2010,
+//     available: false,
+//   }
+
+//   const book2 = {
+//     title: 'Nuotykiai prie dykumos',
+//     author: 'Thomas Thomasonas',
+//     genre: 'action',
+//     price: 35.99,
+//     pages: 1500,
+//     chapters: ['Izanga', 'Pradzia', 'Paslaptis', 'Pabaiga', 'The end'],
+//     year: 2020,
+//     available: true,
+//   }
+
+//   if (book1.pages < book2.pages) {
+//     console.log(`Plonesnė knyga "${book1.title}" ji turi ${book1.pages} puslapiu.`)
+//   } else if (book1.pages > book2.pages) {
+//     console.log(`Plonesnė knyga "${book2.title}" ji turi ${book2.pages} puslapiu.`)
+//   } else {
+//     console.log('Abi knygos turi vienoda puslapiu kieki')
+//   }
+//   if (book1.chapters.length > book2.chapters.length) {
+//     console.log(`Daugiau skyriu turi "${book1.title}".`)
+//   } else if (book1.chapters.length < book2.chapters.length) {
+//     console.log(`Daugiau skyriu turi "${book2.title}".`)
+//   } else {
+//     console.log('Abi knygos turi vienoda skyriu kieki')
+//   }
+
+//   const pigesneKnyga = book1.price < book2.price ? book1 : book2;     ---- Ternary operatoriumi
+//   const brangesneKnyga = book1.price > book2.price ? book1 : book2;
+
+//   const dvigubaKaina = pigesneKnyga.price * 2;
+
+//   if (dvigubaKaina > brangesneKnyga.price) {
+//     console.log(`${brangesneKnyga.title}`)
+//   } else {
+//     console.log(`Net padvigubinus kaina, visvien "${brangesneKnyga.title}" yra brangesne`)
+//   }
+
+//// ---- ARBA su if -------------------------
+
+//   let pigesneKnyga;
+//   let brangesneKnyga;
+
+//   if (book1.price < book2.price) {
+//     pigesneKnyga = book1;
+//     brangesneKnyga = book2;
+//   } else {
+//     pigesneKnyga = book2;
+//     brangesneKnyga = book1;
+//   }
 
 // if (knyga2.kaina * 2 > knyga1.kaina) {
 //   console.log(
@@ -381,7 +466,19 @@
 // console.log(`Prekės suknelė pelningumas: ${pelningumasPrekeSuknele} Eur`);
 // console.log(`Prekės paltas pelningumas: ${pelningumasPrekePaltas} Eur`);
 // console.log(`Prekės kostiumas pelningumas: ${pelningumasPrekeKostiumas} Eur`);
-//
+
+// LEKTORIAUS -------------------------------
+
+// let brangiausiaPreke = preke1.kaina;
+
+// if (preke2.kaina > brangiausiaPreke) {
+//     brangiausiaPreke = preke2.kaina;
+// }
+
+// if (preke3.kaina > brangiausiaPreke) {
+//     brngiausiaPreke = preke3.kaina;
+// }
+
 // Užduotys (5/6)
 
 // 5.
@@ -405,8 +502,8 @@
 // automobilis.gamybosMetai = 2015;
 // automobilis.spalva = 'Pilka';
 // automobilis.darbinisTuris = 1.8;
-// automobilis.arDauzta = true;
-// automobilis.arParduodama = false;
+// automobilis.arDauzta = false;
+// automobilis.arParduodama = true;
 
 // console.log('Automobilio informacija:', automobilis);
 
@@ -420,3 +517,110 @@
 //     2
 //   )} km.`
 // );
+
+// LEKTORIAUS PAVYZDYS ----------------------------------
+
+// const automobilis = {};
+
+// automobilis.marke = 'Toyota';
+// automobilis.modelis = 'Prius';
+// automobilis.rida = 145795;
+// automobilis.spalva = 'Raudona';
+// automobilis.darbinisTuris = 1.9;
+// automobilis.gamybosMetai = 2015;
+// automobilis.arDauztas = false;
+// automobilis.arParduodamas = true;
+
+// const dabartiniaiMetai = new Date(Date.now()).getFullYear();
+// const autoAmzius = dabartiniaiMetai - automobilis.gamybosMetai;
+// console.log(`Autmobilio amžius: ${autoAmzius} metai`);
+
+// const vidutineRidaPerMetus = automobilis.rida / autoAmzius;
+
+// console.log(vidutineRidaPerMetus.toFixed(2))
+
+//------------------------------------------------
+// Pamokos medziaga ------------------------------
+// Galima objektus grupuoti:
+
+// const bmw = {
+//     modelis: '530',
+//     kuroTypas: 'Dyzelinas',
+//     variklioTuris: 3.0,
+//     spalva: 'melyna',
+//     arNaudotas: true,
+//     pravardes: ['Peleda', 'Ryklys', 'Penktukas'],
+//     sukurejas: {
+//       vardas: 'Bambalis',
+//       pavarde: 'Bambalinis'
+//     },
+//     rida: null,
+//   };
+
+//   const audi = {
+//     modelis: 'a4',
+//     kuroTypas: 'Dyzelinas',
+//     variklioTuris: 1.9,
+//     spalva: 'geltona',
+//     arNaudotas: true,
+//     pravardes: null,
+//     sukurejas: {
+//       vardas: 'Audrius',
+//       pavarde: 'Audinius'
+//     },
+//     rida: 150000,
+//   };
+
+//   const vokiskiAutomobiliai = [bmw, audi];   - Masyvas su Objektais
+
+//   console.log(vokiskiAutomobiliai)
+
+// ------------------------------------------
+
+// -- Isveda pazymius ---------------------------
+// const zmogus = {
+//     asdasdad: 'Vardenis',
+//     pavarde: 'Pavardenis',
+//     amzius: 18,
+//     pazymiai: [5, 6, 8, 9]
+//   }
+
+//   for (const pazymys of zmogus.pazymiai) {
+//     console.log(pazymys);
+//   }
+
+// ----------------------------------------------
+
+// -- Skaiciuoja ir isveda SUMA ---------------------------
+
+// ----------------------------------------------
+
+// const zmogus = {
+//   asdasdad: 'Vardenis',
+//   pavarde: 'Pavardenis',
+//   amzius: 18,
+//   pazymiai: [5, 6, 8, 9],
+// };
+
+// let suma = 0;
+
+// for (const pazymys of zmogus.pazymiai) {
+//   suma += pazymys;
+// }
+
+// console.log(suma);
+
+// -- Paima kiekvieno reiskinio reikmsme ir isveda ---------------------------
+
+// let studentas = {
+//   vardas: 'Tomas',
+//   pavarde: 'Tomasas',
+// };
+
+// // Gauti kiekviena reiksme
+// for (const index in studentas) {
+//   console.log(studentas[index]);
+// }
+
+
+// ----------------------------------------------
