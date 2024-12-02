@@ -617,10 +617,38 @@
 //   pavarde: 'Tomasas',
 // };
 
-// // Gauti kiekviena reiksme
+// // Gauti kiekviena reiksme -------------------
+
 // for (const index in studentas) {
 //   console.log(studentas[index]);
 // }
 
-
 // ----------------------------------------------
+
+// Užduotys (1/2)
+// 7. Susikurkite objektą informacijai apie knygyną saugoti. Į šį objektą sudėkite tokias savybes su reikšmėmis:
+// pavadinimas, adresas, plotas (kv. m.), kiek turi knygų, darbo valandos, ar atidarytas.
+// Išveskite šio knygyno objekto raktus su reikšmėmis. Tuomet išveskite visas knygyno savybes,
+// kurių reikšmės yra ne string tipo (plotas, kiek turi knygų ir pan.).
+
+// const knygynas = {
+//   pavadinimas: 'Vaiku knygų pasaulis',
+//   adresas: 'Gadimino g. 17, Marijampole',
+//   plotas: 120,
+//   knyguKiekis: 5000,
+//   darboValandos: '09:00 - 18:00',
+//   atidarytas: true,
+// };
+
+// console.log('Knygyno informacija:');
+// for (const raktas in knygynas) {
+//   console.log(`${raktas}: ${knygynas[raktas]}`);
+// }
+
+// console.log('Savybės, kurių reikšmės nėra string tipo:');
+// for (const raktas in knygynas) {
+//   const reiksme = knygynas[raktas];
+//   if (reiksme === true || reiksme === false || reiksme % 1 === 0) {
+//     console.log(`${raktas}: ${reiksme}`);
+//   }
+// }
