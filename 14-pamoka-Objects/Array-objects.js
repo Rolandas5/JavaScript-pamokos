@@ -339,7 +339,7 @@
 //     console.log('Abi knygos turi vienoda skyriu kieki')
 //   }
 
-//   const pigesneKnyga = book1.price < book2.price ? book1 : book2;     ---- Ternary operatoriumi
+//   const pigesneKnyga = book1.price < book2.price ? book1 : book2;     ---- Ternary operatoriumi (Lygina, kurios knygos kaina didesne)
 //   const brangesneKnyga = book1.price > book2.price ? book1 : book2;
 
 //   const dvigubaKaina = pigesneKnyga.price * 2;
@@ -633,8 +633,7 @@
 
 // const knygynas = {
 //   pavadinimas: 'Vaiku knygų pasaulis',
-//   adresas: 'Gadimino g. 17, Marijampole',
-//   plotas: 120,
+//   adresas: 'Gadimino g. 17, Marijampole',//   plotas: 120,
 //   knyguKiekis: 5000,
 //   darboValandos: '09:00 - 18:00',
 //   atidarytas: true,
@@ -647,8 +646,135 @@
 
 // console.log('Savybės, kurių reikšmės nėra string tipo:');
 // for (const raktas in knygynas) {
-//   const reiksme = knygynas[raktas];
-//   if (reiksme === true || reiksme === false || reiksme % 1 === 0) {
-//     console.log(`${raktas}: ${reiksme}`);
-//   }
+//     if (typeof knygynas[raktas] !== 'string') {
+//         console.log(`${raktas}: ${knygynas[raktas]}`);
+//     }
 // }
+
+// ----- LEKTORIAUS -----
+
+// const knygynas = {
+//     pavadinimas: 'Knygelis',
+//     adresas: 'Vilnius',
+//     plotas: 300,
+//     knyguKiekis: 5000,
+//     darboValandos: '9:00 - 21:00',
+//     arAtidarytas: true,
+//   };
+
+//   for (const raktas in knygynas) {
+//     if (typeof knygynas[raktas] !== 'string') {
+//       console.log(`${raktas}: ${knygynas[raktas]}`)
+//     }
+//   }
+
+// Užduotys (2/2)
+// 8. Susikurkite du objektus, dviejų studentų informacijai saugoti. Abiejuose objektuose sudėkite šias savybes su reikšmėmis:
+// vardas ir pavardė, studijų programos pavadinimas, pažymiai. Raskite abiejų studentų pažymių vidurkius.
+// Išveskite abiejų studentų informaciją, bei pažymių vidurkius. Raskite ir išveskite,
+// kurio studento pažymių vidurkis yra didesnis ir išveskite jo vardą su pavarde.
+
+// const studentas1 = {
+//   vardas: 'Jonas',
+//   pavarde: 'Jonaitis',
+//   studijuPrograma: 'Chemija',
+//   pazymiai: [5, 6, 8, 9, 5],
+// };
+
+// const studentas2 = {
+//   vardas: 'Petras',
+//   pavarde: 'Petraitis',
+//   studijuPrograma: 'Fizika',
+//   pazymiai: [10, 7, 9, 9, 8],
+// };
+
+// let suma1 = 0;
+// for (let i = 0; i < studentas1.pazymiai.length; i++) {
+//   suma1 += studentas1.pazymiai[i];
+// }
+// let vidurkis1 = suma1 / studentas1.pazymiai.length;
+
+// let suma2 = 0;
+// for (let i = 0; i < studentas2.pazymiai.length; i++) {
+//   suma2 += studentas2.pazymiai[i];
+// }
+// let vidurkis2 = suma2 / studentas2.pazymiai.length;
+
+// console.log(`Studentas: ${studentas1.vardas} ${studentas1.pavarde}`);
+// console.log(`Programa: ${studentas1.studijuPrograma}`);
+// console.log(`Pažymių vidurkis: ${vidurkis1.toFixed(2)}`);
+
+// console.log(`Studentas: ${studentas2.vardas} ${studentas2.pavarde}`);
+// console.log(`Programa: ${studentas2.studijuPrograma}`);
+// console.log(`Pažymių vidurkis: ${vidurkis2.toFixed(2)}`);
+
+// const geriausiasStudentas = vidurkis1 > vidurkis2 ? studentas1 : studentas2;
+
+// console.log(
+//   `Geriausią vidurkį (${Math.max(vidurkis1, vidurkis2).toFixed(2)}) turi: ${
+//     geriausiasStudentas.vardas
+//   } ${geriausiasStudentas.pavarde}`
+// );
+
+// // LUKO ----------------------
+
+// for (let key in studentas1) {
+//   console.log(`${key}: ${studentas1[key]}`);
+// }
+// for (let key in studentas1) {
+//   console.log(`${key}: ${studentas1[key]}`);
+// }
+// let suma1 = 0;
+// let suma2 = 0;
+// for (let i = 0; i < studentas1.pazymiai.length; i++) {
+//   suma1 += studentas1.pazymiai[i];
+// }
+// for (let i = 0; i < studentas2.pazymiai.length; i++) {
+//   suma2 += studentas2.pazymiai[i];
+// }
+// let vidurkis1 = suma1 / studentas1.pazymiai.length;
+// let vidurkis2 = suma2 / studentas2.pazymiai.length;
+// if (vidurkis1 > vidurkis2) {
+//   console.log(`${studentas1.vardas} ${studentas1.pavarde} ${vidurkis1}`);
+// } else if (vidurkis2 > vidurkis1) {
+//   console.log(`${studentas2.vardas} ${studentas2.pavarde} ${vidurkis2}`);
+// } else {
+//   console.log('Abu studentai turi vienodą vidurkį.');
+//}
+
+// ------------ Pavercia i stingą -- JSON.stringify(obj)
+
+// let automobilis = {
+//   marke: 'Toyota',
+//   modelis: 'Prius',
+//   kaina: 20000,
+//   nuolaidaProcentais: 10,
+//   automobilioKainaSuNuolaida: function () {
+//     let galutineKaina = this.kaina * (1 - this.nuolaidaProcentais / 100);
+
+//     return galutineKaina;
+//   },
+// };
+
+// console.log(
+//   `Automobilis kainuos su ${
+//     automobilis.nuolaidaProcentais
+//   }% nuolaida: ${automobilis.automobilioKainaSuNuolaida()}$`
+// );
+
+// -----------------  dvi funkcijos: viena returnina, o kita conspologina ---------------
+
+// let kelione = {
+//     vieta: 'Paryzius',
+//     trukmeDienomis: 5,
+//     dienosBiudzetas: 100,
+//     apskaiciuotiVisaKelionesKaina: function() {
+//       let suma = this.trukmeDienomis * this.dienosBiudzetas;
+//       return suma;
+//     },
+//     parodykInformacija: function() {
+//       console.log(`Kelione i ${this.vieta}, truks ${this.trukmeDienomis} dienas, kainuos is viso: ${this.apskaiciuotiVisaKelionesKaina()}`)
+//     }
+//   }
+  
+//   kelione.parodykInformacija();
