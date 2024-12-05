@@ -161,7 +161,7 @@ function hasPermissions(role) {
 
 // console.log(checkTicketPrice(3));
 
-// -------------DVI FUNKCIJOS, 1 - TIKRINA VALIDUIMA, o 2 - AR GALI ISTRINTI POSTA  -------------------------------
+// -------------DVI FUNKCIJOS, 1 - TIKRINA VALIDUMA, o 2 - AR GALI ISTRINTI POSTA  -------------------------------
 
 // function hasPermissions(role) {
 //     return role === 'admin';
