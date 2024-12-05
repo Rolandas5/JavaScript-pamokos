@@ -1,5 +1,6 @@
 // Funkcijos
 // Funkcijos skirtos atlikti veiksmus
+// Funkcijos Izoliuoja dali kodo, kuri gaalima paleisti vėliau
 
 // Si funkcija grazina suma, padavus du skaicius
 // return zodis gražina reikšme
@@ -7,6 +8,14 @@
 // Jeigu funkcijai reikia kokių nors duomenų, jai tai galima perduoti kaip parametrus / argumentus.
 // a ir b yra parametrai / argumantai (bus naudojami tik funkcijos viduje)
 // Bet koks duomenu tikas gali buti argumentas!!!
+// Funkcijos vienos, kurios ima argumentus ir apsakaičiuoja
+// Funkcijos kitos, kurios neima argumentu.
+// Funkcijoje arguemntu kiekis NĖRA RIBOJAMAS !!!
+// Funkcijoje argumentai turi būti paduoti griežtai tokia pačia tvarka!
+// Veiksmas funkcijoje vyksta iki RETURN, tada gražina. Jei nėra praeina toliau.
+
+// FUNKCIJOS PAVYZDYS ------------------------------------
+//  DINAMIŠKA FUNKCIJA, PRISITAIKANTI --------------------
 
 // function suskaiciuokSuma(a, b) {
 //   return a + b;
@@ -204,24 +213,68 @@
 // (vardas, pavarde, amzius, alga, etatas, specializacija). Isveskite sia informacija suformatuotai
 // (pavz iterpkite, i sakini, ar isveskite sarasu ar pan.).
 
-function suformuokSakini(
-  vardas,
-  pavarde,
-  amzius,
-  alga,
-  etatas,
-  specializacija
-) {
-  console.log(
-    `Grįžta ${etatas} ${specializacija} ${vardas} ${pavarde} amžiaus ${amzius}, ryte iš baro namo dar gatavas, prapylęs visą savo ${alga}, mėnesio algą.`
-  );
-}
+// function showOfficerInfo(
+//   vardas,
+//   pavarde,
+//   amzius,
+//   alga,
+//   etatas,
+//   specializacija
+// ) {
+//   console.log(
+//     `Grįžta ${amzius} ${etatas} ${specializacija} ${vardas} ${pavarde}, ryte iš baro namo dar gatavas, prapylęs visus savo ${alga} šimtus.`
+//   );
+// }
 
-suformuokSakini(
-  'Poviliukas',
-  'Pilypukas',
-  '25 metų',
-  '700 Eur.',
-  'vyresnysis',
-  'patrulis'
-);
+// showOfficerInfo(
+//   'Poviliukas',
+//   'Pilypukas',
+//   '25 metų',
+//   '900',
+//   'vyresnysis',
+//   'patrulis'
+// );
+
+// --- LEKTORIAUS PAVYZDZIAI -------------------------------------
+
+// function showOfficerInfo(vardas, pavarde, amzius, alga, etatas, specializacija) {
+//   let suformatuotasSakinys = `
+//     Sveiki, mano vardas ir pavarde yra ${vardas} ${pavarde}, man yra ${amzius} metu, dirbu ${etatas} etatu as
+//     uzdirbu ${alga} euru per menesi, mano specializacija: ${specializacija}
+//   `
+
+//   return suformatuotasSakinys;
+// }
+
+// console.log(showOfficerInfo('Pavardenis', 'Edgaras', 30, 2000, 'pilnas', 'kriminalistas'))
+// function showOfficerInfo() {
+//   const officer = {
+//     vardas: 'Edgaras',
+//     pavarde: 'Pavarde',
+//     amzius: 30,
+//     statusas: 'aktyvus'
+//   }
+
+//   return officer;
+// }
+
+// console.log(showOfficerInfo().vardas);
+// console.log(showOfficerInfo().pavarde);
+
+// ---------------------------------------------------------
+
+// Grazinamas objektas masyve
+
+// function showOfficerInfo() {
+//   const officer = {
+//     vardas: 'Edgaras',
+//     pavarde: 'Pavarde',
+//     amzius: 30,
+//     statusas: 'aktyvus'
+//   }
+
+//   return [officer];
+// }
+
+// console.log(showOfficerInfo())
+
