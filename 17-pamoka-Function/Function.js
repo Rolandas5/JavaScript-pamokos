@@ -2,43 +2,43 @@
 
 // a. Kai norime gauti duomenis
 
-function getUserName() {
-  return 'username123..';
-}
+// function getUserName() {
+//   return 'username123..';
+// }
 
-function checkWeather() {
-  return 'sunny';
-}
+// function checkWeather() {
+//   return 'sunny';
+// }
 
-function retriveOrderDetails() {
-  return 'order details...';
-}
+// function retriveOrderDetails() {
+//   return 'order details...';
+// }
 
-// b. Kai noriome atlikti veiksma pvz nustatyti duomenis arba juos pakeisti
+// // b. Kai noriome atlikti veiksma pvz nustatyti duomenis arba juos pakeisti
 
-function setUserName(name) {
-  console.log('setting username to: ' + name);
-}
+// function setUserName(name) {
+//   console.log('setting username to: ' + name);
+// }
 
 // Kai norime pakeisti
 
-function updateWeather(temperature) {
-  console.log('updating temperature to: ', temperature);
-}
+// function updateWeather(temperature) {
+//   console.log('updating temperature to: ', temperature);
+// }
 
-function changePassword(newPassword) {
-  console.log('changing password to:', newPassword);
-}
+// function changePassword(newPassword) {
+//   console.log('changing password to:', newPassword);
+// }
 
-// c. Tikrinimas arba validacija, Boolean reiksmes
+// // c. Tikrinimas arba validacija, Boolean reiksmes
 
-function isEmailValid(email) {
-  return email.includes('e');
-}
+// function isEmailValid(email) {
+//   return email.includes('e');
+// }
 
-function hasPermissions(role) {
-  return role === 'admin';
-}
+// function hasPermissions(role) {
+//   return role === 'admin';
+// }
 
 // function generateRandomNumbers() {
 //     let result = '';
@@ -201,10 +201,76 @@ function hasPermissions(role) {
 // function retriveOrderDetails(numbers) {
 //   for (let i = 0; i < numbers.length; i++) {
 //     const number = numbers[i];
-//     console.log(`number ${number} and its square ${number ** 2}`);
+//     console.log(`number ${number} and its square ${number ** 2 / 2}`);
 //   }
 // }
 
 // retriveOrderDetails([5, 6, 10, 15, 3, 1]);
 
 // ----------------------------------------
+
+// Uzduotys 1/3
+// 13. Sukurkite funkciją, kuri per argumentus gautų automobilių duomenis (markė, modelis, gamybos metai, darbinis tūris).
+// Ši funkcija turėtų šiuos duomenis išvesti kaip nors gražiai formatuoti. Iškvieskite šią funkciją du kartus, perduodant
+// skirtingus duomenis jai.
+
+// function retriveOrderDetails(make, model, year, engineCapacity) {
+//   console.log('-----------------------');
+//   console.log(`Automobilis:`);
+//   console.log(`Markė: ${make}`);
+//   console.log(`Modelis: ${model}`);
+//   console.log(`Gamybos metai: ${year}`);
+//   console.log(`Darbinis tūris: ${engineCapacity} l`);
+//   console.log('-----------------------');
+// }
+
+// retriveOrderDetails('Toyota', 'Corolla', 2018, 1.8);
+
+// retriveOrderDetails('BMW', 'X5', 2021, 3.0);
+
+// 14. Sukurkite funkciją sumai skaičiuoti. Ši funkcija per argumentus turėtų gauti du skaičius, bei išvesti patį veiksmą kartu su
+// atsakymu (pvz. 7 + 5 = 12). Sukurkite tokias pačias funkcijas skirtumui, sandaugai ir dalmeniui rasti. Sukurkite dar vieną funkciją,
+// kuri sugeneruotų du atsitiktinius skaičius, bei iškviestų kitas 4 funkcijas, perduodant joms sugeneruotus skaičius.
+// Šią bendrąją funkciją iškvieskite keletą kartų.
+
+// // Funkcija sumai skaičiuoti
+// function calculateSum(a, b) {
+//   console.log(`${a} + ${b} = ${a + b}`);
+// }
+
+// // Funkcija skirtumui skaičiuoti
+// function calculateDifference(a, b) {
+//   console.log(`${a} - ${b} = ${a - b}`);
+// }
+
+// // Funkcija sandaugai skaičiuoti
+// function calculateProduct(a, b) {
+//   console.log(`${a} * ${b} = ${a * b}`);
+// }
+
+// // Funkcija dalmeniui skaičiuoti
+// function calculateQuotient(a, b) {
+//   if (b !== 0) {
+//       console.log(`${a} / ${b} = ${a / b}`);
+//   } else {
+//       console.log("Dalyba iš nulio negalima.");
+//   }
+// }
+
+// // Funkcija, kuri sugeneruoja atsitiktinius skaičius ir iškviečia kitas funkcijas
+// function generateAndCalculate() {
+//   const num1 = Math.floor(Math.random() * 100); // Atsitiktinis skaičius nuo 0 iki 99
+//   const num2 = Math.floor(Math.random() * 100); // Atsitiktinis skaičius nuo 0 iki 99
+
+//   console.log(`Sugeneruoti skaičiai: ${num1}, ${num2}`);
+
+//   calculateSum(num1, num2);
+//   calculateDifference(num1, num2);
+//   calculateProduct(num1, num2);
+//   calculateQuotient(num1, num2);
+// }
+
+// // Iškviečiame bendrąją funkciją kelis kartus
+// generateAndCalculate();
+// generateAndCalculate();
+// generateAndCalculate();
