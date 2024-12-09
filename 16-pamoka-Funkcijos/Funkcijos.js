@@ -13,6 +13,7 @@
 // Funkcijoje arguemntu kiekis NĖRA RIBOJAMAS !!!
 // Funkcijoje argumentai turi būti paduoti griežtai tokia pačia tvarka!
 // Veiksmas funkcijoje vyksta iki RETURN, tada gražina. Jei nėra praeina toliau.
+// Funkcija izoliuoja logiką ir žodelis: RETURN grąžina už funkcijos
 
 // FUNKCIJOS PAVYZDYS ------------------------------------
 //  DINAMIŠKA FUNKCIJA, PRISITAIKANTI --------------------
@@ -277,4 +278,3 @@
 // }
 
 // console.log(showOfficerInfo())
-
