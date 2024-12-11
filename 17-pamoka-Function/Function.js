@@ -403,7 +403,7 @@
 // Už funkcijos ribų susikurkite reikiamus kintamuosius ir masyvus arba objektus studentų pažymiams saugoti ir
 // užpildykite juos duomenimis. Iškvieskite šią funkciją perduodant visus reikiamus duomenis.
 
-// function showStudentDetails(Duomenys) {
+// function showStudentDetails() {
 //     let suma = 0;
 //     for (let i = 0; i < studentas.grades.length; i++) {
 //       suma += studentas.grades[i];
