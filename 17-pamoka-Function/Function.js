@@ -40,6 +40,27 @@
 //   return role === 'admin';
 // }
 
+// -----------------------------------------------
+// Užduotys (3/3)
+// (7.) Sukurkite funkciją, kuri išvestų 10 atsitiktinių skaičių vienoje eilutėje, skaičius atskiriant tarpu.
+// Šią funkciją iškvieskite 5 kartus.
+
+// function randomNumbers() {
+//     let ranNum = [];
+//     for (let i = 0; i < 10; i++) {
+//       const skaiciukas = Math.floor(Math.random() * 100);
+//       ranNum.push(skaiciukas);
+//     }
+
+//     console.log(ranNum.join(' '));
+//   }
+
+//   for (let j = 0; j < 5; j++) {
+//     randomNumbers();
+//   }
+
+// --------------------- KITAS PAVYZDYS ---------------------
+
 // function generateRandomNumbers() {
 //     let result = '';
 
@@ -57,34 +78,12 @@
 //     generateRandomNumbers();
 //   }
 
-// ----    Nusirasyti Gretos !!!!!!!!!!!    ------
-
-// function isvestiAtsitiktiniSkaiciu() {
-//     const skaicius = Math.floor(Math.random() * 100);
-//     console.log(skaicius);
-//   }
-
-//   for (let i = 0; i < 10; i++) {
-//     isvestiAtsitiktiniSkaiciu();
-//   }
-
-// ----    Nusirasyti Gretos !!!!!!!!!!!    ------
-
-// function randomNumbers() {
-//     let ranNum = [];
-//     for (let i = 0; i < 10; i++) {
-//       const skaiciukas = Math.floor(Math.random() * 100);
-//       ranNum.push(skaiciukas);
-//     }
-
-//     console.log(ranNum.join(' '));
-//   }
-
-//   for (let j = 0; j < 5; j++) {
-//     randomNumbers();
-//   }
-
 // -------------------------------------------
+
+// Užduotys (3/3)
+// 8. Sukurkite funkciją, kuri išvestų atsitiktinį skaičių. Už funkcijos ribų sukurkite ciklą, kuris būtų vykdomas 10 kartų.
+// Iškvieskite sukurtą funkciją cikle. Turėtumėte pamatyti 10 atsitiktinių skaičių.
+// --------------------  RETURN ----------------------
 
 // function generateRandomNumber() {
 //   let randomNumber = Math.floor(Math.random() * 10) + 1;
@@ -94,6 +93,17 @@
 // for (let i = 0; i < 10; i++) {
 //   console.log(generateRandomNumber());
 // }
+
+// ------------------------ KITAS PAVYZDYS -------------
+
+// function isvestiAtsitiktiniSkaiciu() {
+//     const skaicius = Math.floor(Math.random() * 100);
+//     console.log(skaicius);
+//   }
+
+//   for (let i = 0; i < 10; i++) {
+//     isvestiAtsitiktiniSkaiciu();
+//   }
 
 // -----------------------------------------------
 // 9. Sukurkite funkciją pasisveikinimui. Šiai funkcijai per argumentus perduokite vardą,
@@ -445,6 +455,28 @@
 //   }
 
 //   isveskStudentoInformacija('Tomas', 'Tomaitis', [5, 6, 7, 9]);
+
+// ---------------- LECTORIAUS 2 --------------------- FUNKCIJA OBJEKTO VIDUJE ------------
+
+//   const studentas = {
+//     vardas: 'Tomas',
+//     pavarde: 'Tomaitis',
+//     pazymiai: [5, 6, 7, 9],
+//     isveskStudentoInformacija: function isveskStudentoInformacija() {
+//         console.log(`Studentas: ${this.vardas} ${this.pavarde}`);
+//         console.log(`Studento pazymiai: ${this.pazymiai}`);
+
+//         let suma = 0;
+//         for (let i = 0; i < this.pazymiai.length; i++) {
+//           suma += this.pazymiai[i];
+//         }
+
+//         let vidurkis = suma / this.pazymiai.length;
+
+//         console.log(`Vidurkis: ${vidurkis}`);
+//      }
+//     }
+//     studentas.isveskStudentoInformacija();
 
 // ---------------- LECTORIAUS ---------------------
 
