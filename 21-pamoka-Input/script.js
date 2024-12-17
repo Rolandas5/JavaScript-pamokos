@@ -51,3 +51,5 @@ button.addEventListener('click', function () {
   ageInput.value = '';
   colorInput.value = '';
 });
+
+
