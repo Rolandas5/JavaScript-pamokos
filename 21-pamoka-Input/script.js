@@ -41,7 +41,7 @@ button.addEventListener('click', function () {
   divContainer.innerHTML = `<p><strong>Vardas:</strong> ${nameInput.value}</p> <p><strong>Spalva:</strong> ${colorInput.value}</p><p><strong>Amžius:</strong> ${ageInput.value}</p>`;
 
   // Pridedame "Delete" mygtuką į divContainer
-  divContainer.appendChild(deleteButton);
+  divContainer.append(deleteButton);
 
   // Pridedame sukurtą Div prie output
   output.append(divContainer);
