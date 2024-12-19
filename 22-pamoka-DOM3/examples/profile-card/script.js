@@ -14,7 +14,6 @@ const card = document.createElement('div');
 card.classList.add('profile-card');
 
 // Pridėsim paveiksliuką
-
 const img = document.createElement('img');
 img.src = userProfile.photo;
 img.alt = userProfile.name;
@@ -25,17 +24,17 @@ name.textContent = userProfile.name;
 
 // Pridedam amzių
 const age = document.createElement('p');
-age.textContent = userProfile.age;
+age.classList.add('age');
+age.textContent = `Amžius: ${userProfile.age}`;
 
 // Pridedam bio
 const bio = document.createElement('p');
 bio.textContent = userProfile.bio;
 
 // Pridedame kortelę į konteinerį
-card.append(name);
-card.append(age);
-card.append(img);
-card.append(card);
-card.append(bio);
+card.append(img); // fotke
+card.append(bio); // bio
+card.append(name); // vardas
+card.append(age); // amzius
 
 container.append(card);
