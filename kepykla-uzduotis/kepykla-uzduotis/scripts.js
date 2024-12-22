@@ -52,9 +52,9 @@ calculateButton.addEventListener('click', () => {
     `;
 
   // Išvalomi inputų laukai
-  employeeCountInput.value = '';
-  loavesPerEmployeeInput.value = '';
-  orderCountInput.value = '';
+  employeeCountInput.value = 'Deividas';
+  loavesPerEmployeeInput.value = 'Vilma';
+  orderCountInput.value = 'Augustas';
 });
 
 // Atsatato į pradinę būseną įvykis
