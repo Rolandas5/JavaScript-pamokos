@@ -14,51 +14,44 @@ const resetButton = document.getElementById('reset');
 const results = document.getElementById('results');
 
 // Ištraukiami elementai
-const employeeCountInput = document.getElementById('employee-count');
-const loavesPerEmployeeInput = document.getElementById('loaves-per-employee');
-const orderCountInput = document.getElementById('order-count');
+const employeeCount = document.getElementById('employee-count');
+const loavesPerEmployee = document.getElementById('loaves-per-employee');
+const orderCount = document.getElementById('order-count');
 
 // Mygtuko skaičiavimo įvykis
 calculateButton.addEventListener('click', () => {
   // Gaunamos reikšmes iš įvesties laukų (Iš suvestų Tag'ų)
-  const employeeCount = Number(employeeCountInput.value);
-  const loavesPerEmployee = Number(loavesPerEmployeeInput.value);
-  const orderCount = Number(orderCountInput.value);
+  const employeeCountValue = Number(employeeCount.value);
+  const loavesPerEmployeeValue = Number(loavesPerEmployee.value);
+  const orderCountValue = Number(orderCount.value);
 
-  // Patikrinama ar visos reikšmės užpildytos ir teisingos
-  if (
-    !employeeCount ||
-    !loavesPerEmployee ||
-    !orderCount ||
-    employeeCount <= 0 ||
-    loavesPerEmployee <= 0 ||
-    orderCount <= 0
-  ) {
-    alert('Prašome užpildyti visus laukus su teisingomis reikšmėmis!');
+  // Patikrinama ar visos reikšmės užpildytos ir teisingos - Neveikia ERROR
+  if (!employeeCountValue || !loavesPerEmployeeValue || !orderCountValue) {
+    results.innerHTML = '<p class="error">Prašome užpildyti visus laukus!</p>';
+    // alert('Prašome užpildyti visus laukus!');
     return;
   }
 
-  // Skaičiavimas (1 darbuotojas gali iškepti 2 kepalus per dieną)
-  const bread = employeeCount * 2; // Kepykla gali pagaminti
-  const result = bread >= orderCount ? 'Taip' : 'Ne'; // Ar spės?
+  // Skaičiavimas kiek kepykla gali iskepti duonso per dieną
+  const totalLoavesPerDay = employeeCountValue * loavesPerEmployeeValue; // Kepykla gali pagaminti
+  const result = totalLoavesPerDay >= orderCountValue ? 'Taip' : 'Ne'; // Ar spės?
 
-  // Atvaizduojami rezultatai
+  // Sukuriami paragrafai ir atvaizduojami rezultatai
   results.innerHTML = `
-        <p><strong>Kepykla per dieną gali pagaminti:</strong> ${bread} kepalų</p>
-        <p><strong>Reikia pagaminti:</strong> ${orderCount} kepalų</p>
+        <p><strong>Kepykla per dieną gali pagaminti:</strong> ${totalLoavesPerDay} kepalų</p>
+        <p><strong>Reikia pagaminti:</strong> ${orderCountValue} kepalų</p>
         <p><strong>Ar spės pagaminti?</strong> <span style="color: ${
           result === 'Taip' ? 'blue' : 'red'
         };">${result}</span></p>
     `;
-
-  // Išvalomi inputų laukai
-  employeeCountInput.value = 'Deividas';
-  loavesPerEmployeeInput.value = 'Vilma';
-  orderCountInput.value = 'Augustas';
 });
 
 // Atsatato į pradinę būseną įvykis
 resetButton.addEventListener('click', () => {
+  // Išvalomi inputų laukai
+  employeeCount.value = '0';
+  loavesPerEmployee.value = '0';
+  orderCount.value = '0';
   results.innerHTML = 'Kol kas nieko nėra.';
 });
 
