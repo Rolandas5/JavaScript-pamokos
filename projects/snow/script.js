@@ -4,8 +4,10 @@ const generateHTML = () => {
   document.body.innerHTML = `
     <div id="snow-container"></div>
     <div id="greeting">
-    <h1>Linksmų Kalėdų!</h1>
+    <h1>🎄 Linksmų Kalėdų, 🎅</h1>
+    <h1>garžios Jums šventės 👋 </h1>
     <p>Kalėdų be sniego nebūna!</p>
+    <h1>❄️ ❄️ 🎁 🎄 🌟 🎁 ❄️ ❄️</h1>
     <button id="start-snowing">Let it snow</button>
     </div>`;
 };
@@ -20,7 +22,7 @@ const createSnowflake = () => {
     x: Math.random() * window.innerWidth,
     y: Math.random() * -50,
     size: Math.random() * 5 + 2,
-    speed: Math.random() * 5 + 1,
+    speed: Math.random() * 3 + 1,
   };
 };
 
@@ -85,6 +87,13 @@ const applyStyles = () => {
   snowContainer.style.width = '100%';
   snowContainer.style.height = '100%';
   snowContainer.style.pointerEvents = 'none';
+
+  const greeting = document.getElementById('greeting');
+  greeting.style.textAlign = 'center';
+  greeting.style.display = 'flex';
+  greeting.style.flexDirection = 'column';
+  greeting.style.justifyContent = 'center';
+  greeting.style.alignItems = 'center';
 };
 
 const initPage = () => {
