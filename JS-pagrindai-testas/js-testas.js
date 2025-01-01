@@ -45,7 +45,7 @@ Normalu = 18.5 <= BMI < 25
 Per mažas svoris = BMI < 18.5
 */
 
-// function calculateBMI(weight, height) {
+// function calculateBmi(weight, height) {
 //   const bmi = weight / height ** 2;
 //   let mass;
 
@@ -63,7 +63,7 @@ Per mažas svoris = BMI < 18.5
 // const weight = 83;
 // const height = 1.7;
 
-// const result = calculateBMI(weight, height);
+// const result = calculateBmi(weight, height);
 
 // console.log(`Jūsų kūno masės indeksas (KMI): ${result.bmi}`);
 // console.log(`Kūno būklė: ${result.bodyCondition}`);
