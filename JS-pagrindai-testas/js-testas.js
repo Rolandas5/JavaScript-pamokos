@@ -128,6 +128,17 @@ duomenis iš Farenheito į Celsijų, ir atvirkščiai.
 dešimties neturėtų būti brūkšniuko.
 */
 
+// let number = '';
+// for (let i = 1; i <= 10; i++) {
+//   if (i === 10) {
+//     number += i;
+//   } else {
+//     number += i + '-';
+//   }
+// }
+// console.log(number);
+
+//
 /*
 7. Panaudokite for ciklus, kad sukurtumėte tokį vaizdą konsolėje.
 *
@@ -137,10 +148,36 @@ dešimties neturėtų būti brūkšniuko.
 *****
 */
 
+// for (let i = 1; i <= 5; i++) {
+//   let stars = '';
+//   for (let j = 1; j <= i; j++) {
+//     stars += '*';
+//   }
+//   console.log(stars);
+// }
+
+//
 /*
 8. Parašykite kodą, kuris apskaičiuos kiek liko dienų iki Kalėdų.
 */
 
+// let thisYear = new Date(Date.now()).getFullYear();
+// let today = new Date();
+// let christmas = new Date(thisYear, 11, 25);
+
+// let daysLeft = 0;
+
+// for (
+//   let date = new Date(today);
+//   date < christmas;
+//   date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1)
+// ) {
+//   daysLeft++;
+// }
+
+// console.log(`Iki Kalėdų liko ${daysLeft} dienų.`);
+
+//
 /*
 9. Parašykite kodą, kuris apjungia masyvo duomenis į vieną
 tekstinę eilutę. Turėtumėte gauti tokį rezultatą:
@@ -148,9 +185,71 @@ Tomas,Dainius,Paulius,Jonas
 Tomas+Dainius+Paulius+Jonas
 */
 
+// let names = ['Tomas', 'Dainius', 'Paulius', 'Jonas'];
+
+// let firstTest = '';
+// for (let i = 0; i < names.length; i++) {
+//   firstTest += names[i];
+//   if (i < names.length - 1) {
+//     firstTest += ',';
+//   }
+// }
+// console.log(firstTest);
+
+// let secondTest = '';
+// for (let i = 0; i < names.length; i++) {
+//   secondTest += names[i];
+//   if (i < names.length - 1) {
+//     secondTest += '+';
+//   }
+// }
+// console.log(secondTest);
+
+//
 /*
 10. Parašykite kodą, kuris sugeneruos dvylikos simbolių
 slaptažodį. Slaptažodyje privalo būti bent po vieną: didžioji raidė,
 mažoji raidė, skaičius, specialusis simbolis. Visi slaptažodžio
 simboliai privalo būti atsitiktiniai ir atsitiktine tvarka.
 */
+
+// function passwordGenerator(len) {
+//   const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // didžiosios raidės
+//   const lowerCase = 'abcdefghijklmnopqrstuvwxyz'; // mažosios raidės
+//   const number = '0123456789'; // skaičiai
+//   const punctuation = '!@#$%^&*()_+~`|}{[]:;?><,./-='; // simboliai
+//   const allChars = upperCase + lowerCase + number + punctuation; // visi simboliai
+
+//   let password = '';
+
+//   // slaptažodyje formuojami simboliai po vieną simbolį iš kiekvienos kategorijos
+//   // parenkama didžioji raidė
+//   password += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
+//   // parenkama mažoji raidė
+//   password += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
+//   // parenkamas skaičius
+//   password += number.charAt(Math.floor(Math.random() * number.length));
+//   // parenkamas simbolis
+//   password += punctuation.charAt(
+//     Math.floor(Math.random() * punctuation.length)
+//   );
+
+//   // užpildo atsitiktiniais simboliais iš visų kategorijų
+//   while (password.length < len) {
+//     password += allChars.charAt(Math.floor(Math.random() * allChars.length));
+//   }
+
+//   // suformuoja slaptažodį su simboliais atsitiktine tvarka
+//   password = password
+//     .split('')
+//     .sort(() => Math.random() - 0.5)
+//     .join('');
+
+//   // užtikrina, kad slaptažodis atitiktų nurodytą ilgį
+//   return password.substr(0, len);
+// }
+
+// console.log(passwordGenerator(12));
+
+//
+//*
