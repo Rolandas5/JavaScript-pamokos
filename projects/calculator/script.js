@@ -9,17 +9,37 @@ let calculation = document.getElementById('calculation');
 let history = [];
 
 function onNumberClick(number) {
-  input.value += number;
+  // 1. padarykite, kad ivedimas negaletu prasideti su skaiciumi 0.
+  if (number === 0 && !input.value) {
+    alert('Paspaudei 0!');
+    return;
+  }
+
+  // Reikia patikrinti ar paskutinis elementas buvo +, -, x, /
+  if (['+', '-', 'x', '/'].includes(lastElement)) {
+  }
+  input.value += `${clickedAction}`;
+}
+
+function onDecimalClick() {
+  const lastNumber = input.value.split(' ').slice(-1)[0];
+
+  if (!lastNumber.includes('.') && !lastNumber.includes(',')) {
+    input.value += ',';
+  }
 }
 
 function onActionClick(clickedAction) {
-  input.value += ' ' + clickedAction + ' ';
-  action = clickedAction;
+  const inputArray = input.value.trim().spit(' ');
+  const lastElement = inputArray[inputArray.length - 1];
+
+  // input.value += ' ' + clickedAction + ' ';
+  // action = clickedAction;
 }
 
 function onEqualClick() {
   // 5 x 2
-  let splitted = input.value.split(' ');
+  let splitted = input.value.replace(/,/g, '.').split(' ');
   // ['5', 'x', '2']
   // '5'
   firstNumber = parseInt(splitted[0]);
@@ -29,7 +49,7 @@ function onEqualClick() {
   secondNumber = parseInt(splitted[2]);
   // Iskvieciu skaiciavimo funkcija
   calculateAnswer();
-  input.value = answer;
+  input.value = answer.toString().replace();
 
   calculation.innerHTML = `${firstNumber} ${action} ${secondNumber}`;
 
@@ -74,7 +94,7 @@ function addToHistory() {
 }
 
 document.getElementById('show-history').onclick = function () {
-    console.log('veikia');
+  // console.log('veikia');
   let formatted = history.map(
     (x) => `<p>${x.firstNumber} ${x.action} ${x.secondNumber} = ${x.answer}</p>`
   );
