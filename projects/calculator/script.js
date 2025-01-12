@@ -24,10 +24,14 @@ function onNumberClick(number) {
 }
 
 function onDecimalClick() {
-  const lastNumber = input.value.split('').slice(-1)[0];
+  if (input.value === '0' || input.value === '') {
+    input.value = '0,';
+  } else {
+    const lastNumber = input.value.split('').slice(-1)[0];
 
-  if (!lastNumber.includes('.') && !lastNumber.includes(',')) {
-    input.value += ',';
+    if (!lastNumber.includes('.') && !lastNumber.includes(',')) {
+      input.value += ',';
+    }
   }
 }
 
@@ -65,7 +69,7 @@ function onEqualClick() {
   secondNumber = parseFloat(splitted[2]);
   // Iskvieciu skaiciavimo funkcija
   calculateAnswer();
-  input.value = answer.toString().replace();
+  input.value = answer.toFixed(1);
 
   calculation.innerHTML = `${firstNumber} ${action} ${secondNumber}`;
 
