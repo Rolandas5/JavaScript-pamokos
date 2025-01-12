@@ -5,24 +5,26 @@ let answer = 0;
 
 let input = document.getElementById('calc-input');
 let calculation = document.getElementById('calculation');
-
 let history = [];
 
 function onNumberClick(number) {
-  // 1. padarykite, kad ivedimas negaletu prasideti su skaiciumi 0.
-  if (number === 0 && !input.value) {
-    alert('Paspaudei 0!');
-    return;
-  }
+  // 1. Padarykite, kad įvedimas negalėtų prasidėti  su skaičiumi 0.
+  if (input.value === '0' || input.value === answer.toString()) {
+    input.value = number.toString();
+  } else {
+    const lastNumber = input.value.split(' ').slice(-1)[0];
 
-  // Reikia patikrinti ar paskutinis elementas buvo +, -, x, /
-  if (['+', '-', 'x', '/'].includes(lastElement)) {
+    if (
+      !lastNumber.includes('.') ||
+      (lastNumber.includes('.') && number !== '.')
+    ) {
+      input.value += number.toString();
+    }
   }
-  input.value += `${clickedAction}`;
 }
 
 function onDecimalClick() {
-  const lastNumber = input.value.split(' ').slice(-1)[0];
+  const lastNumber = input.value.split('').slice(-1)[0];
 
   if (!lastNumber.includes('.') && !lastNumber.includes(',')) {
     input.value += ',';
@@ -30,11 +32,25 @@ function onDecimalClick() {
 }
 
 function onActionClick(clickedAction) {
-  const inputArray = input.value.trim().spit(' ');
-  const lastElement = inputArray[inputArray.length - 1];
+  if (input.value === answer.toString()) {
+    firstNumber = answer;
+    action = clickedAction;
+    input.value = answer + ' ' + clickedAction + ' ';
+  } else {
+    const lastInput = input.value[input.value.length - 2];
 
-  // input.value += ' ' + clickedAction + ' ';
-  // action = clickedAction;
+    if (
+      lastInput === '+' ||
+      lastInput === '-' ||
+      lastInput === 'x' ||
+      lastInput === '/'
+    ) {
+      input.value = input.value.slice(0, -3);
+    }
+
+    input.value += ' ' + clickedAction + ' ';
+    action = clickedAction;
+  }
 }
 
 function onEqualClick() {
@@ -42,11 +58,11 @@ function onEqualClick() {
   let splitted = input.value.replace(/,/g, '.').split(' ');
   // ['5', 'x', '2']
   // '5'
-  firstNumber = parseInt(splitted[0]);
+  firstNumber = parseFloat(splitted[0]);
   // 'x'
   action = splitted[1];
   // '2'
-  secondNumber = parseInt(splitted[2]);
+  secondNumber = parseFloat(splitted[2]);
   // Iskvieciu skaiciavimo funkcija
   calculateAnswer();
   input.value = answer.toString().replace();
@@ -83,6 +99,12 @@ function onClearCalculator() {
   calculation.innerHTML = '';
 }
 
+function onBackspaceClick() {
+  if (input.value.length > 0) {
+    input.value = input.value.substring(0, input.value.length - 1);
+  }
+}
+
 function addToHistory() {
   let historyItem = {
     firstNumber,
@@ -90,14 +112,32 @@ function addToHistory() {
     secondNumber,
     answer,
   };
+
   history.push(historyItem);
+  if (history.length > 5) {
+    // Saugom tik paskutinius 5 elementus
+    history = history.slice(-5);
+  }
 }
 
 document.getElementById('show-history').onclick = function () {
-  // console.log('veikia');
-  let formatted = history.map(
+  // Paimam paskutinius 5 elementus is masyvo ir juos atvaizduojam
+  let lastFiveHistory = history.slice(-5);
+
+  let formatted = lastFiveHistory.map(
     (x) => `<p>${x.firstNumber} ${x.action} ${x.secondNumber} = ${x.answer}</p>`
   );
   let historyBlock = document.querySelector('.calculator .history-items');
   historyBlock.innerHTML = formatted.join('');
 };
+
+function hideHistory() {
+  let historyBlock = document.querySelector('.calculator .history-items');
+  historyBlock.innerHTML = '';
+}
+
+function clearHistory() {
+  history = [];
+  let historyBlock = document.querySelector('.calculator .history-items');
+  historyBlock.innerHTML = '';
+}
