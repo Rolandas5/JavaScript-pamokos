@@ -1,4 +1,4 @@
-// Asinc JS (Asinchroninis JS)
+// Async JS (Asinchroninis JS)
 
 // Asinchroninis kodas - nevykdomas pagal eile, o pagal ivykius kuriuos mes nustatome.
 // 1. Veiksmas
@@ -46,7 +46,6 @@ const orderCoffee = (coffeeType) => {
     }, 5000);
   });
 };
-
 
 // Galime naudoti .then() ir .catch() metodus, nes orderCoffee funkcija grąžina Promise objektą.
 orderCoffee('Latte')
