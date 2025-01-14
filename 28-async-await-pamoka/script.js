@@ -49,26 +49,26 @@
 
 // 2. Sukurkite JS funkciją, kuri daro HTTP Request užklausą ir grąžina pažadą su duomenimis.
 
-const response = await fetch('./api/oto.json');
+// const response = await fetch('./api/oto.json');
 
-const fetchoto = async () => {
-  const response = await fetch('./api/oto.json');
+// const fetchoto = async () => {
+//   const response = await fetch('./api/oto.json');
 
-  if (!response.ok) {
-    throw new Error('Klaida, nepavyko gauti duomenu is API');
-  } else {
-    // Gražina duoemnis
-    return await response.json();
-  }
-};
+//   if (!response.ok) {
+//     throw new Error('Klaida, nepavyko gauti duomenu is API');
+//   } else {
+//     // Gražina duoemnis
+//     return await response.json();
+//   }
+// };
 
-fetchoto()
-  .then((duomenys) => {
-    console.log(duomenys);
-  })
-  .catch((error) => {
-    console.log('Klaida:', error);
-  });
+// fetchoto()
+//   .then((duomenys) => {
+//     console.log(duomenys);
+//   })
+//   .catch((error) => {
+//     console.log('Klaida:', error);
+//   });
 
 // 3. Sukurti funkciją(1), kuri kaip parametrus priimtų skaičių masyvą ir callback
 // funkciją(2). Funkcija(1) turėtų iteruoti per masyvą ir siųsti kiekvieną jos narį
@@ -92,3 +92,88 @@ fetchoto()
 
 // const skaiciusMasyvas = [1, 2, 3, 4, 5, 6, 7, 8];
 // arLyginiaiSkaiciai(skaiciusMasyvas, callback);
+
+// 4. Sukurkite funkciją, kuri priima masyvą (kuris užpildytas "string" tipo
+// reikšmėmis(žodžiais)) ir callback funkciją. Funkcija turėtų iteruoti per masyvą ir
+// nusiųsti kiekvieną stringą esantį masyve callback funckijai. Callback funkcija turi
+// grąžinti atsiųsto "string" ilgį.
+// - susikurti funkciją patikrinkZodzioIlgi(masyvas, callbackFunkcija)
+// - funkcijos patikrinkZodzioIlgi esmė - panaudoti foreach ir kiekvienam masyvo
+// nariui iškviest funkciją koksIlgis(string)
+
+// Funkcija priima masyvą ir callback funkciją
+// function patikrinkZodzioIlgi(masyvas, callbackFunkcija) {
+//   masyvas.forEach((zodis) => {
+//     const ilgis = callbackFunkcija(zodis);
+//     console.log(`Žodis: "${zodis}" turi ${ilgis} simbolius.`);
+//   });
+// }
+
+// // Callback funkcija grąžina string ilgį
+// function koksIlgis(string) {
+//   return string.length;
+// }
+
+// // Masyvas su žodžiais
+// const zodziai = ['obuolys', 'bananas', 'kompiuteris', 'javascript'];
+
+// // Iškviečiame funkciją
+// patikrinkZodzioIlgi(zodziai, koksIlgis);
+
+// 5. Sukurkite funkciją, kuri kaip argumentus priima masyvą, sudarytą iš objektų ir
+// callback funkciją. Funkcija turėtų iteruoti per masyvą ir nusiųsti kiekvieną ten
+// esantį objektą (tarkim tai automobilis, turintis šias properties: rida, markė,
+// modelis, gamybos metai ir kaina (bet galite susikurti ir savo nuožiūra)) callback
+// funkcijai. Callback funkcija turėtų grąžinti naują objektą, kuriame būtų tik
+// atrinktos objekto properties, tarkim tik markė ir modelis)
+
+// Funkcija iteruoja per masyvą ir naudoja callback funkciją
+// function apdorokObjektus(objektuMasyvas, callbackFunkcija) {
+//   const naujiObjektai = objektuMasyvas.map((objektas) =>
+//     callbackFunkcija(objektas)
+//   );
+//   return naujiObjektai;
+// }
+
+// // Callback funkcija grąžina naują objektą tik su tam tikromis properties
+// function atrinktiMarkeIrModeli(auto) {
+//   return {
+//     marke: auto.marke,
+//     modelis: auto.modelis,
+//   };
+// }
+
+// // Automobilių masyvas
+// const automobiliai = [
+//   {
+//     rida: 150000,
+//     marke: 'Toyota',
+//     modelis: 'Corolla',
+//     metai: 2015,
+//     kaina: 8500,
+//   },
+//   { rida: 80000, marke: 'Honda', modelis: 'Civic', metai: 2018, kaina: 12000 },
+//   {
+//     rida: 200000,
+//     marke: 'Volkswagen',
+//     modelis: 'Passat',
+//     metai: 2010,
+//     kaina: 6500,
+//   },
+//   {
+//     rida: 50000,
+//     marke: 'Tesla',
+//     modelis: 'Model 3',
+//     metai: 2020,
+//     kaina: 35000,
+//   },
+// ];
+
+// // Panaudojame funkciją
+// const atrinktiAutomobiliai = apdorokObjektus(
+//   automobiliai,
+//   atrinktiMarkeIrModeli
+// );
+
+// // Atvaizduoja rezultatą
+// console.log(atrinktiAutomobiliai);
