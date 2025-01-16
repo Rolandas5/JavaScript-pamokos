@@ -101,7 +101,7 @@
 // - funkcijos patikrinkZodzioIlgi esmė - panaudoti foreach ir kiekvienam masyvo
 // nariui iškviest funkciją koksIlgis(string)
 
-// Funkcija priima masyvą ir callback funkciją
+//Funkcija priima masyvą ir callback funkciją
 // function patikrinkZodzioIlgi(masyvas, callbackFunkcija) {
 //   masyvas.forEach((zodis) => {
 //     const ilgis = callbackFunkcija(zodis);
@@ -114,10 +114,8 @@
 //   return string.length;
 // }
 
-// // Masyvas su žodžiais
 // const zodziai = ['obuolys', 'bananas', 'kompiuteris', 'javascript'];
 
-// // Iškviečiame funkciją
 // patikrinkZodzioIlgi(zodziai, koksIlgis);
 
 // 5. Sukurkite funkciją, kuri kaip argumentus priima masyvą, sudarytą iš objektų ir
@@ -127,53 +125,111 @@
 // funkcijai. Callback funkcija turėtų grąžinti naują objektą, kuriame būtų tik
 // atrinktos objekto properties, tarkim tik markė ir modelis)
 
-// Funkcija iteruoja per masyvą ir naudoja callback funkciją
-// function apdorokObjektus(objektuMasyvas, callbackFunkcija) {
-//   const naujiObjektai = objektuMasyvas.map((objektas) =>
-//     callbackFunkcija(objektas)
-//   );
-//   return naujiObjektai;
+// function apdorotiMasyvaSuCallback(masyvas, callback) {
+//   const rezultatas = [];
+//   for (let i = 0; i < masyvas.length; i++) {
+//     const apdorotasObjektas = callback(masyvas[i]);
+//     rezultatas.push(apdorotasObjektas);
+//   }
+//   return rezultatas;
 // }
 
-// // Callback funkcija grąžina naują objektą tik su tam tikromis properties
-// function atrinktiMarkeIrModeli(auto) {
-//   return {
-//     marke: auto.marke,
-//     modelis: auto.modelis,
-//   };
-// }
-
-// // Automobilių masyvas
 // const automobiliai = [
 //   {
 //     rida: 150000,
 //     marke: 'Toyota',
 //     modelis: 'Corolla',
-//     metai: 2015,
-//     kaina: 8500,
+//     gamybosMetai: 2015,
+//     kaina: 10000,
 //   },
-//   { rida: 80000, marke: 'Honda', modelis: 'Civic', metai: 2018, kaina: 12000 },
 //   {
 //     rida: 200000,
-//     marke: 'Volkswagen',
-//     modelis: 'Passat',
-//     metai: 2010,
-//     kaina: 6500,
-//   },
-//   {
-//     rida: 50000,
-//     marke: 'Tesla',
-//     modelis: 'Model 3',
-//     metai: 2020,
-//     kaina: 35000,
+//     marke: 'Volvo',
+//     modelis: 'XC90',
+//     gamybosMetai: 2012,
+//     kaina: 7000,
 //   },
 // ];
 
-// // Panaudojame funkciją
-// const atrinktiAutomobiliai = apdorokObjektus(
-//   automobiliai,
-//   atrinktiMarkeIrModeli
-// );
+// // Callback funkcija
+// function gautiMarkeIrModeli(auto) {
+//   return { marke: auto.marke, modelis: auto.modelis };
+// }
 
-// // Atvaizduoja rezultatą
-// console.log(atrinktiAutomobiliai);
+// // Funkcijos iškvietimas
+// const apdorotiAutomobiliai = apdorotiMasyvaSuCallback(
+//   automobiliai,
+//   gautiMarkeIrModeli
+// );
+// console.log('Apdoroti automobiliai:', apdorotiAutomobiliai);
+
+// 6. Sukurkite funkciją, kuri priims parametrą isUserLogedIn (reikšmė gali būti true
+// arba false). Jūsų funkcijos viduje, naudojantis Promise konstruktoriumi, sukursite
+// naują promise objektą, kuris tikrins ar isUserLogedIn yra true ar false, jeigu
+// paduotas parametras ar false, jūsų sukurtas promise turėtų reject’inti užklausą,
+// kitu atveju - resolvinam ir grąžinam pasirinktą pranešimą. Iškvieskite tą funkciją
+// naudojantis then ir catch, o gautą rezultatą atvaizduokite konsolėje.
+
+//
+// const userStatus = true;
+
+// function checkUserLoginStatus(isUserLogedIn) {
+//   return new Promise((resolve, reject) => {
+//     if (isUserLogedIn) {
+//       resolve('Vartotojas prisijungęs! Sveiki sugrįžę!');
+//     } else {
+//       reject(
+//         'Vartotojas neprisijungęs. Prašome prisijungti, kad galėtumėte tęsti.'
+//       );
+//     }
+//   });
+// }
+
+// Funkcijos iškvietimas su then ir catch
+// checkUserLoginStatus(userStatus)
+//   .then((zinute) => {
+//     console.log('Pavyko:', zinute);
+//   })
+//   .catch((klaida) => {
+//     console.error('Klaida:', klaida);
+//   });
+
+//
+// Jei stringas ('1') viduje vietoj boolen, tai bus:'true'.
+// Jei tusčias objektas ({}) vietoj boolen bus 'true'.
+// Jei tusčias stringas (' ') vietoj boolen bus 'true'.
+
+// checkUserLoginStatus(false)
+//   .then((zinute) => {
+//     console.log('Pavyko:', zinute);
+//   })
+//   .catch((klaida) => {
+//     console.error('Klaida:', klaida);
+//   });
+
+// 7. Sukurkite async funkciją, kuri priimtų parametrą "age". Funkcijos viduje
+// padarykite patikrinimą ar "age" yra paduotas ir ar jis yra skaičius - priešingu
+// atveju iškvieskite klaidą (throw). Toliau tikrinkite ar amžius yra daugiau nei 18,
+// jeigu taip, grąžinkite, kad “vartotojas gali laikyti vairuotojo egzaminą", priešingu
+// atveju iškvieskite klaidą (throw) ir parašykite, kad "jūsų amžius turi būti daugiau
+// nei 18". Iškvieskite šią funkciją naudojantis then ir catch.
+
+// kai panaudojame async ji bus Promise
+
+// async function checkDriversAge(age) {
+//   if (age >= 18) {
+//     // resolve
+//     return 'Vairuotojas yra pilnametis.';
+//   } else {
+//     // reject
+//     throw new Error('Vairuotojas yra nepilnametis');
+//   }
+// }
+
+// checkDriversAge(18)
+//   .then((massage) => {
+//     console.log('Vairuotojas gali vairuoti:', massage);
+//   })
+//   .catch((error) => {
+//     console.log('Vairuotojas negali vairuoti:', error);
+//   });
