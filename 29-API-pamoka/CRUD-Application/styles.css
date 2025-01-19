@@ -1,0 +1,129 @@
+/* Bendras stilius */
+body {
+  background-color: #1d2630;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Formos stilius */
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form label {
+  font-size: 16px;
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: black;
+}
+
+form input::placeholder {
+  color: #b0b0b0;
+}
+
+form input:focus {
+  outline: none;
+  border: 2px solid #007bff;
+  background-color: #f0f0f0;
+}
+
+.add-btn {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background-color: #17a2b8;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.add-btn:hover {
+  background-color: #138496;
+}
+
+/* Lentelės stilius */
+table {
+  width: 80%;
+  margin: 20px auto 0;
+  border-collapse: collapse;
+  background-color: #2a3a48;
+  border: 1px solid white;
+}
+
+thead {
+  background-color: #343f4c;
+}
+
+thead th {
+  padding: 15px;
+  font-size: 16px;
+  color: white;
+  text-align: left;
+}
+
+tbody tr {
+  background-color: #2a3a48;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #343f4c;
+}
+
+tbody td {
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+.edit {
+  display: inline-block;
+  background-color: #ffc107;
+  color: black;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.edit:hover {
+  background-color: #e0a800;
+}
+
+.delete {
+  display: inline-block;
+  background-color: #dc3545;
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.delete:hover {
+  background-color: #c82333;
+}

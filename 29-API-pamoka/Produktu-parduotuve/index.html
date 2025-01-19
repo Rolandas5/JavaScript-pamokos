@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produktų Parduotuvė</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-input"
+          id="searchInput"
+          placeholder="Ieškoti produkto..."
+        />
+      </div>
+      <div class="products-container" id="productsContainer"></div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+      <a
+        href="#!"
+        class="close"
+        style="
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: #fff;
+          font-size: 30px;
+          text-decoration: none;
+        "
+        >&times;</a
+      >
+      <img id="lightboxImage" src="" alt="Produktas" />
+    </div>
+  </body>
+</html>
