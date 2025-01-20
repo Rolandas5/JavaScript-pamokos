@@ -10,13 +10,25 @@ const fetchMovies = async (query = '') => {
 
   try {
     //fecth yra Promises (Pažadas) naudojamas tik kartu su await
-    const response = await fetch(url);
-    const data = await response.json();
-    displayMovies(query ? data : data.map((show) => ({ show })));
+    const response = await axios(url);
+    displayMovies(
+      query ? response.data : response.data.map((show) => ({ show }))
+    );
   } catch (error) {
     console.error(error);
   }
 };
+
+// Tas pats kaip axios
+// try {
+//   //fecth yra Promises (Pažadas) naudojamas tik kartu su await
+//   const response = await fetch(url);
+//   const data = await response.json();
+//   displayMovies(query ? data : data.map((show) => ({ show })));
+// } catch (error) {
+//   console.error(error);
+// }
+// };
 
 const displayMovies = (movies) => {
   moviesContainer.innerHTML = '';

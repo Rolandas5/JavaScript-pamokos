@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <h1>Studentų sąrašas</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Vardas</th>
+          <th>Pavardė</th>
+          <th>Amžius</th>
+          <th>Veiksmai</th>
+        </tr>
+      </thead>
+      <tbody id="student-list"></tbody>
+      <!-- Čia bus mūsų duomenys iš API -->
+    </table>
+    <!-- Forma su kuria siusime informacija -->
+    <form id="add-student-form">
+      <h3>Prideti studentą:</h3>
+
+      <label>Vardas</label>
+      <input type="text" id="name" required />
+
+      <label>Pavardė</label>
+      <input type="text" id="surname" required />
+
+      <label>Amžius</label>
+      <input type="number" id="age" required />
+
+      <button type="submit">Pridėti</button>
+    </form>
+  </body>
+</html>
