@@ -40,7 +40,7 @@ async function getStudents() {
 document
   .getElementById('add-student-form')
   .addEventListener('submit', async (event) => {
-    // PreventDefault - mneleidzia puslapiui persikrauti
+    // PreventDefault - neleidzia puslapiui persikrauti
     event.preventDefault();
     const name = document.getElementById('name').value;
     const surname = document.getElementById('surname').value;
